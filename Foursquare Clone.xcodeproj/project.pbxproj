@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3299AE672418FC513B775530 /* Pods_Foursquare_CloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987B857AEA84AF395D53BA4A /* Pods_Foursquare_CloneUITests.framework */; };
 		4645BFFD65E5E574348C6C7F /* Pods_Foursquare_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */; };
 		BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
 		BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
@@ -15,19 +14,15 @@
 		BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */; };
 		BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */; };
 		BE9C83FD1F8AE1D300A5401F /* Foursquare_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83FC1F8AE1D300A5401F /* Foursquare_CloneTests.swift */; };
-		BE9C84081F8AE1D300A5401F /* Foursquare_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C84071F8AE1D300A5401F /* Foursquare_CloneUITests.swift */; };
+		BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03391F8DCEE900470DAF /* UserLocationService.swift */; };
+		BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03391F8DCEE900470DAF /* UserLocationService.swift */; };
+		BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */; };
+		BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03421F8DD47400470DAF /* LocationManagerMock.swift */; };
 		F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BE9C83F91F8AE1D300A5401F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE9C83DC1F8AE1D200A5401F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BE9C83E31F8AE1D200A5401F;
-			remoteInfo = "Foursquare Clone";
-		};
-		BE9C84041F8AE1D300A5401F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE9C83DC1F8AE1D200A5401F /* Project object */;
 			proxyType = 1;
@@ -52,9 +47,9 @@
 		BE9C83F81F8AE1D300A5401F /* Foursquare CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Foursquare CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83FC1F8AE1D300A5401F /* Foursquare_CloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foursquare_CloneTests.swift; sourceTree = "<group>"; };
 		BE9C83FE1F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE9C84031F8AE1D300A5401F /* Foursquare CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Foursquare CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE9C84071F8AE1D300A5401F /* Foursquare_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foursquare_CloneUITests.swift; sourceTree = "<group>"; };
-		BE9C84091F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECD03391F8DCEE900470DAF /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
+		BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceSpec.swift; sourceTree = "<group>"; };
+		BECD03421F8DD47400470DAF /* LocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerMock.swift; sourceTree = "<group>"; };
 		E89B84E07B99D63BA61C5E57 /* Pods-Foursquare CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B53916F13256DA67DF44D /* Pods-Foursquare CloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,14 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE9C84001F8AE1D300A5401F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3299AE672418FC513B775530 /* Pods_Foursquare_CloneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,9 +102,9 @@
 		BE9C83DB1F8AE1D200A5401F = {
 			isa = PBXGroup;
 			children = (
+				BECD03361F8C785000470DAF /* Extensions */,
 				BE9C83E61F8AE1D200A5401F /* Foursquare Clone */,
 				BE9C83FB1F8AE1D300A5401F /* Foursquare CloneTests */,
-				BE9C84061F8AE1D300A5401F /* Foursquare CloneUITests */,
 				BE9C83E51F8AE1D200A5401F /* Products */,
 				40D45315B4D6177E3DB95F86 /* Pods */,
 				9AF039833A44EA6A7B0E79F6 /* Frameworks */,
@@ -129,7 +116,6 @@
 			children = (
 				BE9C83E41F8AE1D200A5401F /* Foursquare Clone.app */,
 				BE9C83F81F8AE1D300A5401F /* Foursquare CloneTests.xctest */,
-				BE9C84031F8AE1D300A5401F /* Foursquare CloneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +123,7 @@
 		BE9C83E61F8AE1D200A5401F /* Foursquare Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BECD03371F8DCE3D00470DAF /* Services */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
 				BE9C83E91F8AE1D200A5401F /* ViewController.swift */,
 				BE9C83EB1F8AE1D200A5401F /* Main.storyboard */,
@@ -150,19 +137,36 @@
 		BE9C83FB1F8AE1D300A5401F /* Foursquare CloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				BECD033D1F8DCF7E00470DAF /* Services */,
 				BE9C83FC1F8AE1D300A5401F /* Foursquare_CloneTests.swift */,
 				BE9C83FE1F8AE1D300A5401F /* Info.plist */,
 			);
 			path = "Foursquare CloneTests";
 			sourceTree = "<group>";
 		};
-		BE9C84061F8AE1D300A5401F /* Foursquare CloneUITests */ = {
+		BECD03361F8C785000470DAF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BE9C84071F8AE1D300A5401F /* Foursquare_CloneUITests.swift */,
-				BE9C84091F8AE1D300A5401F /* Info.plist */,
 			);
-			path = "Foursquare CloneUITests";
+			name = Extensions;
+			path = "Foursquare Clone/Extensions";
+			sourceTree = "<group>";
+		};
+		BECD03371F8DCE3D00470DAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BECD03391F8DCEE900470DAF /* UserLocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BECD033D1F8DCF7E00470DAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */,
+				BECD03421F8DD47400470DAF /* LocationManagerMock.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,27 +213,6 @@
 			productReference = BE9C83F81F8AE1D300A5401F /* Foursquare CloneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BE9C84021F8AE1D300A5401F /* Foursquare CloneUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE9C84121F8AE1D300A5401F /* Build configuration list for PBXNativeTarget "Foursquare CloneUITests" */;
-			buildPhases = (
-				41F05BFE305C21D30B540E32 /* [CP] Check Pods Manifest.lock */,
-				BE9C83FF1F8AE1D300A5401F /* Sources */,
-				BE9C84001F8AE1D300A5401F /* Frameworks */,
-				BE9C84011F8AE1D300A5401F /* Resources */,
-				F79AC01782191B5CC5E232BD /* [CP] Embed Pods Frameworks */,
-				1FC35108E2070215E3F5F1A0 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BE9C84051F8AE1D300A5401F /* PBXTargetDependency */,
-			);
-			name = "Foursquare CloneUITests";
-			productName = "Foursquare CloneUITests";
-			productReference = BE9C84031F8AE1D300A5401F /* Foursquare CloneUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,11 +228,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					BE9C83F71F8AE1D300A5401F = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BE9C83E31F8AE1D200A5401F;
-					};
-					BE9C84021F8AE1D300A5401F = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BE9C83E31F8AE1D200A5401F;
@@ -271,7 +249,6 @@
 			targets = (
 				BE9C83E31F8AE1D200A5401F /* Foursquare Clone */,
 				BE9C83F71F8AE1D300A5401F /* Foursquare CloneTests */,
-				BE9C84021F8AE1D300A5401F /* Foursquare CloneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,13 +265,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BE9C83F61F8AE1D300A5401F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE9C84011F8AE1D300A5401F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,21 +300,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare Clone/Pods-Foursquare Clone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1FC35108E2070215E3F5F1A0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare CloneUITests/Pods-Foursquare CloneUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2707E27D3F8356B6A8D455DF /* [CP] Check Pods Manifest.lock */ = {
@@ -398,24 +353,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare Clone/Pods-Foursquare Clone-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		41F05BFE305C21D30B540E32 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Foursquare CloneUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5445918006DE0195B55356CF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,21 +383,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F79AC01782191B5CC5E232BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare CloneUITests/Pods-Foursquare CloneUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -468,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */,
 				BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */,
 			);
@@ -478,14 +401,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9C83FD1F8AE1D300A5401F /* Foursquare_CloneTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE9C83FF1F8AE1D300A5401F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE9C84081F8AE1D300A5401F /* Foursquare_CloneUITests.swift in Sources */,
+				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
+				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
+				BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,11 +414,6 @@
 			isa = PBXTargetDependency;
 			target = BE9C83E31F8AE1D200A5401F /* Foursquare Clone */;
 			targetProxy = BE9C83F91F8AE1D300A5401F /* PBXContainerItemProxy */;
-		};
-		BE9C84051F8AE1D300A5401F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BE9C83E31F8AE1D200A5401F /* Foursquare Clone */;
-			targetProxy = BE9C84041F8AE1D300A5401F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -697,38 +610,6 @@
 			};
 			name = Release;
 		};
-		BE9C84131F8AE1D300A5401F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FA2435F526F3E0B15602C48 /* Pods-Foursquare CloneUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Foursquare CloneUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Foursquare-CloneUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Foursquare Clone";
-			};
-			name = Debug;
-		};
-		BE9C84141F8AE1D300A5401F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25AD5562254ED178084CA124 /* Pods-Foursquare CloneUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Foursquare CloneUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Foursquare-CloneUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Foursquare Clone";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -755,15 +636,6 @@
 			buildConfigurations = (
 				BE9C84101F8AE1D300A5401F /* Debug */,
 				BE9C84111F8AE1D300A5401F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE9C84121F8AE1D300A5401F /* Build configuration list for PBXNativeTarget "Foursquare CloneUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE9C84131F8AE1D300A5401F /* Debug */,
-				BE9C84141F8AE1D300A5401F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
