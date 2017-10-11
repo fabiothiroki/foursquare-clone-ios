@@ -30,9 +30,7 @@ class UserLocationService: NSObject {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.requestLocation()
     }
-    
 }
-
 
 extension UserLocationService: CLLocationManagerDelegate {
     
