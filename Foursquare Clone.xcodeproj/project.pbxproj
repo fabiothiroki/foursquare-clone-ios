@@ -13,7 +13,6 @@
 		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
 		BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */; };
 		BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */; };
-		BE9C83FD1F8AE1D300A5401F /* Foursquare_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83FC1F8AE1D300A5401F /* Foursquare_CloneTests.swift */; };
 		BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03391F8DCEE900470DAF /* UserLocationService.swift */; };
 		BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03391F8DCEE900470DAF /* UserLocationService.swift */; };
 		BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */; };
@@ -45,7 +44,6 @@
 		BE9C83F11F8AE1D300A5401F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE9C83F31F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9C83F81F8AE1D300A5401F /* Foursquare CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Foursquare CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE9C83FC1F8AE1D300A5401F /* Foursquare_CloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foursquare_CloneTests.swift; sourceTree = "<group>"; };
 		BE9C83FE1F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BECD03391F8DCEE900470DAF /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
 		BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceSpec.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				BECD033D1F8DCF7E00470DAF /* Services */,
-				BE9C83FC1F8AE1D300A5401F /* Foursquare_CloneTests.swift */,
 				BE9C83FE1F8AE1D300A5401F /* Info.plist */,
 			);
 			path = "Foursquare CloneTests";
@@ -400,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9C83FD1F8AE1D300A5401F /* Foursquare_CloneTests.swift in Sources */,
 				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
 				BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */,

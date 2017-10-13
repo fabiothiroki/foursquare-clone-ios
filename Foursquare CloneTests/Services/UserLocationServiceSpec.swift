@@ -22,10 +22,9 @@ class UserLocationServiceSpec: XCTestCase {
         container.register(UserLocationService.self) { r in
             UserLocationService.init(locationManager: r.resolve(LocationManager.self)!)
         }
-        
     }
     
-    func testShouldHaveDelegate() {
+    func testDependencyDelegateShouldBeWrapperClass() {
         let locationManager = container.resolve(LocationManager.self)!
         let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
         
