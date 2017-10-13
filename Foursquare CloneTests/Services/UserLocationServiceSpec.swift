@@ -12,7 +12,7 @@ import Swinject
 class UserLocationServiceSpec: XCTestCase {
     
     var container: Container!
-    
+        
     override func setUp() {
         super.setUp()
         
@@ -30,9 +30,13 @@ class UserLocationServiceSpec: XCTestCase {
         let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
         
         XCTAssertTrue(locationManager.delegate === userLocationService)
-        
     }
     
-
+    func testShouldRequestUserPermission() {
+        let locationManager: LocationManagerMock = container.resolve(LocationManager.self)! as! LocationManagerMock
+        let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
+        
+        
+    }
     
 }

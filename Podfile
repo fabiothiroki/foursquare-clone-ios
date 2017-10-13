@@ -14,8 +14,4 @@ target 'Foursquare Clone' do
     inherit! :search_paths
   end
 
-  target 'Foursquare CloneUITests' do
-    inherit! :search_paths
-  end
-
 end
