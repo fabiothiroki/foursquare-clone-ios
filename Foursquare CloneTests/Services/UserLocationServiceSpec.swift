@@ -35,7 +35,7 @@ class UserLocationServiceSpec: XCTestCase {
         let locationManager: LocationManagerMock = container.resolve(LocationManager.self)! as! LocationManagerMock
         let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
         
-        
+        XCTAssertTrue(locationManager.calledRequestWhenInUseAuthorization)
     }
     
 }
