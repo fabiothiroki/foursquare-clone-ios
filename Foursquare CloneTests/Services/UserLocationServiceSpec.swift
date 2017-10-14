@@ -33,9 +33,12 @@ class UserLocationServiceSpec: XCTestCase {
     
     func testShouldRequestUserPermission() {
         let locationManager: LocationManagerMock = container.resolve(LocationManager.self)! as! LocationManagerMock
-        let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
         
+        XCTAssertFalse(locationManager.calledRequestWhenInUseAuthorization)
         
+        _ = container.resolve(UserLocationService.self)!
+        
+        XCTAssertTrue(locationManager.calledRequestWhenInUseAuthorization)
     }
     
 }
