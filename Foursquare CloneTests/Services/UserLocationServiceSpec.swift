@@ -19,26 +19,25 @@ class UserLocationServiceSpec: XCTestCase {
         container = Container()
         container.register(LocationManager.self) { _ in LocationManagerMock() }
             .inObjectScope(.container)
-        container.register(UserLocationService.self) { r in
-            UserLocationService.init(locationManager: r.resolve(LocationManager.self)!)
+        container.register(UserLocationService.self) { resolver in
+            UserLocationService.init(locationManager: resolver.resolve(LocationManager.self)!)
         }
     }
     
     func testDependencyDelegateShouldBeWrapperClass() {
         let locationManager = container.resolve(LocationManager.self)!
         let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
-        
+
         XCTAssertTrue(locationManager.delegate === userLocationService)
     }
-    
+
     func testShouldRequestUserPermission() {
-        let locationManager: LocationManagerMock = container.resolve(LocationManager.self)! as! LocationManagerMock
+        let locationManager: LocationManagerMock = container.resolve(LocationManager.self)! as? LocationManagerMock
         
         XCTAssertFalse(locationManager.calledRequestWhenInUseAuthorization)
-        
+
         _ = container.resolve(UserLocationService.self)!
         
         XCTAssertTrue(locationManager.calledRequestWhenInUseAuthorization)
     }
-    
 }
