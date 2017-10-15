@@ -1,6 +1,8 @@
 osx_image: xcode9
 language: objective-c
-cache: cocoapods
+cache:
+- bundler
+- cocoapods
 xcode_workspace: Foursquare Clone.xcworkspace
 xcode_scheme: Foursquare CloneTests
 
