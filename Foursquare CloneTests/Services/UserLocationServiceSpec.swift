@@ -10,12 +10,12 @@ import XCTest
 import Swinject
 
 class UserLocationServiceSpec: XCTestCase {
-    
+
     var container: Container!
         
     override func setUp() {
         super.setUp()
-        
+
         container = Container()
         container.register(LocationManager.self) { _ in LocationManagerMock() }
             .inObjectScope(.container)

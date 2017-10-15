@@ -179,6 +179,7 @@
 				BE9C83E21F8AE1D200A5401F /* Resources */,
 				10D358A28E7D578547EC0798 /* [CP] Embed Pods Frameworks */,
 				385DC77DAB482EB7BC8B5526 /* [CP] Copy Pods Resources */,
+				BEE6CF881F93978500752B12 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -379,6 +380,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BEE6CF881F93978500752B12 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
