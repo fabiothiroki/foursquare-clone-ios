@@ -8,6 +8,7 @@ xcode_scheme: Foursquare CloneTests
 
 script:
   - xcodebuild clean test -quiet -workspace Foursquare\ Clone.xcworkspace -scheme Foursquare\ Clone -destination 'platform=iOS Simulator,name=iPhone 5s'
+  - bundle exec danger
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
