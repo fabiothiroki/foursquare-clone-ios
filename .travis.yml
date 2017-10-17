@@ -3,8 +3,6 @@ language: objective-c
 cache:
 - bundler
 - cocoapods
-xcode_workspace: Foursquare Clone.xcworkspace
-xcode_scheme: Foursquare CloneTests
 
 script:
   - xcodebuild clean test -quiet -workspace Foursquare\ Clone.xcworkspace -scheme Foursquare\ Clone -destination 'platform=iOS Simulator,name=iPhone 5s'
