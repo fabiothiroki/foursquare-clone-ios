@@ -14,7 +14,7 @@ DEPENDENCIES:
   - ReSwift (= 4.0.0)
   - RxCocoa (from `https://github.com/ReactiveX/RxSwift`, tag `4.0.0-rc.0`)
   - RxSwift (from `https://github.com/ReactiveX/RxSwift`, tag `4.0.0-rc.0`)
-  - SwiftLint
+  - SwiftLint (= 0.23.1)
   - Swinject (= 2.1.1)
   - SwinjectStoryboard (= 1.1.2)
 
@@ -43,6 +43,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 8bae060de77192baed4b147da59aa51a14d6f9dd
+PODFILE CHECKSUM: cd28d806ed8f2435d3f17a512788f9a22d590824
 
 COCOAPODS: 1.3.1
