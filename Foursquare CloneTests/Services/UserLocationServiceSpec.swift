@@ -38,9 +38,18 @@ class UserLocationServiceSpec: XCTestCase {
         }
 
         XCTAssertFalse(locationManager.calledRequestWhenInUseAuthorization)
-
         _ = container.resolve(UserLocationService.self)!
-
         XCTAssertTrue(locationManager.calledRequestWhenInUseAuthorization)
+    }
+
+    func testShouldRequestLocationUpdates() {
+        guard let locationManager = container.resolve(LocationManager.self)! as? LocationManagerMock else {
+            XCTFail("Error resolving container dependencies")
+            return
+        }
+
+        XCTAssertFalse(locationManager.calledRequestLocation)
+        _ = container.resolve(UserLocationService.self)!
+        XCTAssertTrue(locationManager.calledRequestLocation)
     }
 }
