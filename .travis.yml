@@ -4,8 +4,8 @@ cache:
 - bundler
 - cocoapods
 
-install:
-  - pod install --repo-update
+before_install:
+  - pod repo update
 
 script:
   - xcodebuild clean test -quiet -workspace Foursquare\ Clone.xcworkspace -scheme Foursquare\ Clone -destination 'platform=iOS Simulator,name=iPhone 5s'
