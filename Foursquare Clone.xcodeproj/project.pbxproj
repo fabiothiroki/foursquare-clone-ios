@@ -17,6 +17,8 @@
 		BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03391F8DCEE900470DAF /* UserLocationService.swift */; };
 		BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */; };
 		BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03421F8DD47400470DAF /* LocationManagerMock.swift */; };
+		BEF7B53B1FA02A70007157AB /* NearbyPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */; };
+		BEF7B53C1FA02A70007157AB /* NearbyPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */; };
 		F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,7 @@
 		BECD03391F8DCEE900470DAF /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
 		BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceSpec.swift; sourceTree = "<group>"; };
 		BECD03421F8DD47400470DAF /* LocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerMock.swift; sourceTree = "<group>"; };
+		BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesService.swift; sourceTree = "<group>"; };
 		E89B84E07B99D63BA61C5E57 /* Pods-Foursquare CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B53916F13256DA67DF44D /* Pods-Foursquare CloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		BE9C83E61F8AE1D200A5401F /* Foursquare Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BEF7B5391FA01EE6007157AB /* Models */,
 				BECD03371F8DCE3D00470DAF /* Services */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
 				BE9C83E91F8AE1D200A5401F /* ViewController.swift */,
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BECD03391F8DCEE900470DAF /* UserLocationService.swift */,
+				BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +170,13 @@
 			);
 			path = Services;
 			sourceTree = "<group>";
+		};
+		BEF7B5391FA01EE6007157AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -279,7 +291,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare Clone/Pods-Foursquare Clone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
@@ -288,7 +303,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
@@ -404,6 +422,7 @@
 			files = (
 				BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */,
+				BEF7B53B1FA02A70007157AB /* NearbyPlacesService.swift in Sources */,
 				BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +433,7 @@
 			files = (
 				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
+				BEF7B53C1FA02A70007157AB /* NearbyPlacesService.swift in Sources */,
 				BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
