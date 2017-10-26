@@ -20,7 +20,7 @@ extension CLLocationManager: LocationManager {}
 class UserLocationService: NSObject {
 
     fileprivate var locationManager: LocationManager
-    fileprivate var lastLocation: CLLocation?
+    public var subject = PublishSubject<CLLocation>()
 
     init(locationManager: LocationManager) {
 
@@ -33,21 +33,13 @@ class UserLocationService: NSObject {
         self.locationManager.requestLocation()
     }
 
-    func getUserLastLocation(_ observer: AnyObserver<CLLocation>) {
-        
-//        observer.
-        
-    }
 }
 
 extension UserLocationService: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        self.lastLocation = locations[0]
-    
-        
-        print(locations)
+
+        subject.onNext(locations[0])
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

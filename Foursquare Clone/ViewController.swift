@@ -8,20 +8,18 @@
 
 import UIKit
 import CoreLocation
+import RxSwift
 
 class ViewController: UIViewController {
+
+    let locationService = UserLocationService.init(locationManager: CLLocationManager())
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let locationService = UserLocationService.init(locationManager: CLLocationManager())
+        locationService.subject.subscribe(onNext: { (location) in
+           print(location)
+        }).disposed(by: disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
