@@ -54,7 +54,7 @@ class UserLocationServiceSpec: XCTestCase {
 
         locationStream.subscribe(onNext: { (location) in
             XCTAssertEqual(mockLocation, location)
-        }, onError: { (error) in
+        }, onError: { (_) in
             XCTFail("Should not return error")
         }).disposed(by: disposeBag)
 
