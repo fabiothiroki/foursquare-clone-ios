@@ -9,16 +9,16 @@
 import CoreLocation
 
 class LocationManagerMock: LocationManager {
-    
+
     public var calledRequestWhenInUseAuthorization = false
     public var calledRequestLocation = false
-    
-    var delegate: CLLocationManagerDelegate?
-    
+
+    weak var delegate: CLLocationManagerDelegate?
+
     func requestWhenInUseAuthorization() {
         calledRequestWhenInUseAuthorization = true
     }
-    
+
     func requestLocation() {
         calledRequestLocation = true
     }

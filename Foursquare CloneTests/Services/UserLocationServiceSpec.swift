@@ -8,12 +8,15 @@
 
 import XCTest
 import Swinject
+import RxSwift
+import CoreLocation
 
 class UserLocationServiceSpec: XCTestCase {
 
     var container: Container!
     var locationManager: LocationManagerMock!
     var userLocationService: UserLocationService!
+    let disposeBag = DisposeBag()
 
     override func setUp() {
         super.setUp()
@@ -37,5 +40,24 @@ class UserLocationServiceSpec: XCTestCase {
         XCTAssertFalse(locationManager.calledRequestWhenInUseAuthorization)
         _ = userLocationService.getUserLocation()
         XCTAssertTrue(locationManager.calledRequestWhenInUseAuthorization)
+    }
+
+    func testShouldRequestLocation() {
+        XCTAssertFalse(locationManager.calledRequestLocation)
+        _ = userLocationService.getUserLocation()
+        XCTAssertTrue(locationManager.calledRequestLocation)
+    }
+
+    func testShouldProvideLocation() {
+        let mockLocation = CLLocation.init(latitude: -23.5666151, longitude: 46.6463977)
+        let locationStream = userLocationService.getUserLocation()
+
+        locationStream.subscribe(onNext: { (location) in
+            XCTAssertEqual(mockLocation, location)
+        }, onError: { (error) in
+            XCTFail("Should not return error")
+        }).disposed(by: disposeBag)
+
+        locationManager.delegate?.locationManager!(CLLocationManager(), didUpdateLocations: [mockLocation])
     }
 }
