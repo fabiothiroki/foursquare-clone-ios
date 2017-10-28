@@ -20,29 +20,29 @@ extension CLLocationManager: LocationManager {}
 class UserLocationService: NSObject {
 
     fileprivate var locationManager: LocationManager
-    public var subject = PublishSubject<CLLocation>()
+    fileprivate let subject = PublishSubject<CLLocation>()
 
     init(locationManager: LocationManager) {
-
         self.locationManager = locationManager
 
         super.init()
-
         self.locationManager.delegate = self
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.requestLocation()
     }
 
+    func getUserLocation() -> Observable<CLLocation> {
+        self.locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        return subject
+    }
 }
 
 extension UserLocationService: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
         subject.onNext(locations[0])
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+        subject.onError(error)
     }
 }

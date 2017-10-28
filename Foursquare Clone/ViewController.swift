@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        locationService.subject.subscribe(onNext: { (location) in
+        locationService.getUserLocation().subscribe(onNext: { (location) in
            print(location)
         }).disposed(by: disposeBag)
     }

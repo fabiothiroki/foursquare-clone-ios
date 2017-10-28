@@ -12,7 +12,9 @@ import Swinject
 class UserLocationServiceSpec: XCTestCase {
 
     var container: Container!
-        
+    var locationManager: LocationManagerMock!
+    var userLocationService: UserLocationService!
+
     override func setUp() {
         super.setUp()
 
@@ -22,34 +24,18 @@ class UserLocationServiceSpec: XCTestCase {
         container.register(UserLocationService.self) { resolver in
             UserLocationService.init(locationManager: resolver.resolve(LocationManager.self)!)
         }
-    }
-    
-    func testDependencyDelegateShouldBeWrapperClass() {
-        let locationManager = container.resolve(LocationManager.self)!
-        let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
 
+        locationManager = container.resolve(LocationManager.self)! as? LocationManagerMock
+        userLocationService = container.resolve(UserLocationService.self)!
+    }
+
+    func testDependencyDelegateShouldBeWrapperClass() {
         XCTAssertTrue(locationManager.delegate === userLocationService)
     }
 
     func testShouldRequestUserPermission() {
-        guard let locationManager = container.resolve(LocationManager.self)! as? LocationManagerMock else {
-            XCTFail("Error resolving container dependencies")
-            return
-        }
-
         XCTAssertFalse(locationManager.calledRequestWhenInUseAuthorization)
-        _ = container.resolve(UserLocationService.self)!
+        _ = userLocationService.getUserLocation()
         XCTAssertTrue(locationManager.calledRequestWhenInUseAuthorization)
-    }
-
-    func testShouldRequestLocationUpdates() {
-        guard let locationManager = container.resolve(LocationManager.self)! as? LocationManagerMock else {
-            XCTFail("Error resolving container dependencies")
-            return
-        }
-
-        XCTAssertFalse(locationManager.calledRequestLocation)
-        _ = container.resolve(UserLocationService.self)!
-        XCTAssertTrue(locationManager.calledRequestLocation)
     }
 }
