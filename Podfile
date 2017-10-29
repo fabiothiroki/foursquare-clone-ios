@@ -14,6 +14,8 @@ target 'Foursquare Clone' do
 
   target 'Foursquare CloneTests' do
     inherit! :search_paths
+    
+    pod 'Moya/RxSwift',        '10.0.0'
   end
 
 end
