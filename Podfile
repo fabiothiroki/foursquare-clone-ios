@@ -10,7 +10,7 @@ target 'Foursquare Clone' do
   pod 'SwinjectStoryboard',  '1.1.2'
   pod 'expanding-collection','1.1.1'
   pod 'SwiftLint'           ,'0.23.1'
-  pod 'Moya/RxSwift'
+  pod 'Moya/RxSwift',        '10.0.0'
 
   target 'Foursquare CloneTests' do
     inherit! :search_paths
