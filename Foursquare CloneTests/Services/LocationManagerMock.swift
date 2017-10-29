@@ -22,5 +22,4 @@ class LocationManagerMock: LocationManager {
     func requestLocation() {
         calledRequestLocation = true
     }
-
 }
