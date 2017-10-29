@@ -49,7 +49,7 @@ class UserLocationServiceSpec: XCTestCase {
     }
 
     func testShouldProvideLocation() {
-        let mockLocation = CLLocation.init(latitude: -23.5666151, longitude: 46.6463977)
+        let mockLocation = CLLocation.init(latitude: -23.5666151, longitude: -46.6463977)
         let locationStream = userLocationService.getUserLocation()
 
         locationStream.subscribe(onNext: { (location) in
