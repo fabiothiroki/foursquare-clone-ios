@@ -8,11 +8,16 @@
 
 import XCTest
 import Swinject
+import RxSwift
+import CoreLocation
 
 class UserLocationServiceSpec: XCTestCase {
 
     var container: Container!
-        
+    var locationManager: LocationManagerMock!
+    var userLocationService: UserLocationService!
+    let disposeBag = DisposeBag()
+
     override func setUp() {
         super.setUp()
 
@@ -22,34 +27,50 @@ class UserLocationServiceSpec: XCTestCase {
         container.register(UserLocationService.self) { resolver in
             UserLocationService.init(locationManager: resolver.resolve(LocationManager.self)!)
         }
-    }
-    
-    func testDependencyDelegateShouldBeWrapperClass() {
-        let locationManager = container.resolve(LocationManager.self)!
-        let userLocationService: UserLocationService = container.resolve(UserLocationService.self)!
 
+        locationManager = container.resolve(LocationManager.self)! as? LocationManagerMock
+        userLocationService = container.resolve(UserLocationService.self)!
+    }
+
+    func testDependencyDelegateShouldBeWrapperClass() {
         XCTAssertTrue(locationManager.delegate === userLocationService)
     }
 
     func testShouldRequestUserPermission() {
-        guard let locationManager = container.resolve(LocationManager.self)! as? LocationManagerMock else {
-            XCTFail("Error resolving container dependencies")
-            return
-        }
-
         XCTAssertFalse(locationManager.calledRequestWhenInUseAuthorization)
-        _ = container.resolve(UserLocationService.self)!
+        _ = userLocationService.getUserLocation()
         XCTAssertTrue(locationManager.calledRequestWhenInUseAuthorization)
     }
 
-    func testShouldRequestLocationUpdates() {
-        guard let locationManager = container.resolve(LocationManager.self)! as? LocationManagerMock else {
-            XCTFail("Error resolving container dependencies")
-            return
-        }
-
+    func testShouldRequestLocation() {
         XCTAssertFalse(locationManager.calledRequestLocation)
-        _ = container.resolve(UserLocationService.self)!
+        _ = userLocationService.getUserLocation()
         XCTAssertTrue(locationManager.calledRequestLocation)
+    }
+
+    func testShouldProvideLocation() {
+        let mockLocation = CLLocation.init(latitude: -23.5666151, longitude: -46.6463977)
+        let locationStream = userLocationService.getUserLocation()
+
+        locationStream.subscribe(onNext: { (location) in
+            XCTAssertEqual(mockLocation, location)
+        }, onError: { (_) in
+            XCTFail("Should not return error")
+        }).disposed(by: disposeBag)
+
+        locationManager.delegate?.locationManager!(CLLocationManager(), didUpdateLocations: [mockLocation])
+    }
+
+    func testShouldReturnErrorIfLocationManagerFail() {
+        let mockError = NSError(domain: "Mock error", code: 42, userInfo: nil )
+        let locationStream = userLocationService.getUserLocation()
+
+        locationStream.subscribe(onNext: { (_) in
+            XCTFail("Should return error")
+        }, onError: { (error) in
+            XCTAssertNotNil(error)
+        }).disposed(by: disposeBag)
+
+        locationManager.delegate?.locationManager!(CLLocationManager(), didFailWithError: mockError)
     }
 }

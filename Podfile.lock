@@ -1,9 +1,17 @@
 PODS:
+  - Alamofire (4.5.1)
   - expanding-collection (1.1.1)
+  - Moya/Core (10.0.0):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (10.0.0):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - Result (3.2.4)
   - ReSwift (4.0.0)
-  - RxCocoa (4.0.0-rc.0):
-    - RxSwift (~> 4.0.0-rc.0)
-  - RxSwift (4.0.0-rc.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
   - SwiftLint (0.23.1)
   - Swinject (2.1.1)
   - SwinjectStoryboard (1.1.2):
@@ -11,38 +19,26 @@ PODS:
 
 DEPENDENCIES:
   - expanding-collection (= 1.1.1)
+  - Moya/RxSwift
   - ReSwift (= 4.0.0)
-  - RxCocoa (from `https://github.com/ReactiveX/RxSwift`, tag `4.0.0-rc.0`)
-  - RxSwift (from `https://github.com/ReactiveX/RxSwift`, tag `4.0.0-rc.0`)
+  - RxCocoa (= 4.0.0)
+  - RxSwift (= 4.0.0)
   - SwiftLint (= 0.23.1)
   - Swinject (= 2.1.1)
   - SwinjectStoryboard (= 1.1.2)
 
-EXTERNAL SOURCES:
-  RxCocoa:
-    :git: https://github.com/ReactiveX/RxSwift
-    :tag: 4.0.0-rc.0
-  RxSwift:
-    :git: https://github.com/ReactiveX/RxSwift
-    :tag: 4.0.0-rc.0
-
-CHECKOUT OPTIONS:
-  RxCocoa:
-    :git: https://github.com/ReactiveX/RxSwift
-    :tag: 4.0.0-rc.0
-  RxSwift:
-    :git: https://github.com/ReactiveX/RxSwift
-    :tag: 4.0.0-rc.0
-
 SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   expanding-collection: b345a597665ed4a133d6e3f9b79e0f6091d7114c
+  Moya: adb58b0f4e58430db43cc6e2f6ebab1836501186
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   ReSwift: f058ef13b46ae5f463f10605ccbbb7fb04424d8d
-  RxCocoa: 58841348f4c6e6f6cd244522c16a6b7df5008956
-  RxSwift: f0ff3c78e1f71a7d3506defde0b79c72fe39bac3
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: cd28d806ed8f2435d3f17a512788f9a22d590824
+PODFILE CHECKSUM: fd9f290ee7f652f474f624aa4e5f5b7bbbc97799
 
 COCOAPODS: 1.3.1

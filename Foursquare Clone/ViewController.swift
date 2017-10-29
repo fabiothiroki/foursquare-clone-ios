@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import CoreLocation
+import RxSwift
 
 class ViewController: UIViewController {
 
+    let locationService = UserLocationService.init(locationManager: CLLocationManager())
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        locationService.getUserLocation().subscribe(onNext: { (location) in
+           print(location)
+        }).disposed(by: disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
