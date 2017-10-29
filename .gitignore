@@ -24,6 +24,9 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+# API keys
+*/*/ServicesConstants.swift
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
