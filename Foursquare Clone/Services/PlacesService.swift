@@ -39,12 +39,22 @@ extension PlacesService: TargetType {
     var task: Task {
         switch self {
         case let .recommended(latitude, longitude):
-            return .requestParameters(parameters: ["ll": latitude], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: requestParameters(latitude: latitude, longitude: longitude),
+                                      encoding: URLEncoding.queryString)
 
         }
     }
 
     var headers: [String: String]? {
         return nil
+    }
+
+    private func requestParameters(latitude: Double, longitude: Double) -> [String: Any] {
+        return [
+            "v": "20171029",
+            "venuePhotos": 1,
+            "ll": String(format: "%f,%f", latitude, longitude),
+            "client_id": ServicesContants.foursquareClientId,
+            "client_secret": ServicesContants.foursquareClientSecret]
     }
 }
