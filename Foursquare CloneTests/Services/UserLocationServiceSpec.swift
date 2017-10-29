@@ -62,7 +62,7 @@ class UserLocationServiceSpec: XCTestCase {
     }
 
     func testShouldReturnErrorIfLocationManagerFail() {
-        let mockError = NSError(domain: "my error description", code: 42, userInfo: nil )
+        let mockError = NSError(domain: "Mock error", code: 42, userInfo: nil )
         let locationStream = userLocationService.getUserLocation()
 
         locationStream.subscribe(onNext: { (_) in
