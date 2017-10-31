@@ -4,11 +4,13 @@ PODS:
   - ModelMapper (7.2.0)
   - Moya (10.0.0):
     - Moya/Core (= 10.0.0)
-  - Moya-ModelMapper (6.0.0):
-    - Moya-ModelMapper/Core (= 6.0.0)
   - Moya-ModelMapper/Core (6.0.0):
     - ModelMapper
     - Moya (~> 10.0)
+  - Moya-ModelMapper/RxSwift (6.0.0):
+    - Moya-ModelMapper/Core
+    - Moya/RxSwift (~> 10.0)
+    - RxSwift
   - Moya/Core (10.0.0):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -27,7 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - expanding-collection (= 1.1.1)
-  - Moya-ModelMapper
+  - Moya-ModelMapper/RxSwift
   - Moya/RxSwift (= 10.0.0)
   - ReSwift (= 4.0.0)
   - RxCocoa (= 4.0.0)
@@ -50,6 +52,6 @@ SPEC CHECKSUMS:
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 4e47c5034898235ddf117212bc4115f35e287087
+PODFILE CHECKSUM: 724e809eedf3620c4ae6d6e7514897089472bbec
 
 COCOAPODS: 1.3.1

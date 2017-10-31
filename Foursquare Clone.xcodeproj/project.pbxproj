@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4645BFFD65E5E574348C6C7F /* Pods_Foursquare_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */; };
+		BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
+		BE2E0F801FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
+		BE2E0F821FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
+		BE2E0F831FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
 		BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
 		BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
 		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
@@ -41,6 +45,8 @@
 		359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_CloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA2435F526F3E0B15602C48 /* Pods-Foursquare CloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneUITests/Pods-Foursquare CloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		987B857AEA84AF395D53BA4A /* Pods_Foursquare_CloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_CloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2E0F7E1FA80204002A5494 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		BE2E0F811FA8192D002A5494 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		BE9C83E41F8AE1D200A5401F /* Foursquare Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foursquare Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9C83E91F8AE1D200A5401F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +187,8 @@
 		BEF7B5391FA01EE6007157AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE2E0F7E1FA80204002A5494 /* Place.swift */,
+				BE2E0F811FA8192D002A5494 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = SOURCE_ROOT;
@@ -443,8 +451,10 @@
 				BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BEF7B5431FA63EF5007157AB /* ServicesConstants.swift in Sources */,
 				BEF7B53E1FA16782007157AB /* SwinjectStoryboard+Setup.swift in Sources */,
+				BE2E0F821FA8192D002A5494 /* Group.swift in Sources */,
 				BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */,
 				BEF7B53B1FA02A70007157AB /* PlacesService.swift in Sources */,
+				BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */,
 				BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,9 +463,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2E0F831FA8192D002A5494 /* Group.swift in Sources */,
 				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
 				BEF7B53C1FA02A70007157AB /* PlacesService.swift in Sources */,
+				BE2E0F801FA80204002A5494 /* Place.swift in Sources */,
 				BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */,
 				BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */,
 			);
