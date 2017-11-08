@@ -12,8 +12,13 @@ import Mapper
 struct Place: Mappable {
 
     let name: String
+    let category: String
 
     init(map: Mapper) throws {
         try name = map.from("venue.name")
+
+        let categories: [Category] = try map.from("venue.categories")
+        category = categories.first?.name ?? ""
+
     }
 }

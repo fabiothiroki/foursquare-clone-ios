@@ -27,6 +27,9 @@ class ViewController: UIViewController {
 
         _ = provider.rx.request(.recommended(latitude: -23.5666151, longitude: -46.6463977))
             .map(to: [Group].self, keyPath: "response.groups")
+            .map({ (groups) -> [Place] in
+                return groups.first?.places ?? []
+            })
             .subscribe(onSuccess: { (place) in
                 print(place)
             }, onError: { (error) in
