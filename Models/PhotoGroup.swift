@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  PhotoGroup.swift
 //  Foursquare Clone
 //
 //  Created by Fabio Hiroki on 08/11/17.
@@ -9,10 +9,10 @@
 import Foundation
 import Mapper
 
-struct Category: Mappable {
-    let name: String
+struct PhotoGroup: Mappable {
+    let items: [PhotoItem]
 
     init(map: Mapper) throws {
-        try name = map.from("name")
+        items = try map.from("items")
     }
 }

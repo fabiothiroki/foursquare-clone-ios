@@ -13,6 +13,7 @@ struct Place: Mappable {
 
     let name: String
     let category: String
+    let imageUrl: String
 
     init(map: Mapper) throws {
         try name = map.from("venue.name")
@@ -20,5 +21,7 @@ struct Place: Mappable {
         let categories: [Category] = try map.from("venue.categories")
         category = categories.first?.name ?? ""
 
+        let photoGroup: [PhotoGroup] = try map.from("venue.photos.groups")
+        imageUrl = photoGroup.first?.items.first?.imageUrl ?? ""
     }
 }
