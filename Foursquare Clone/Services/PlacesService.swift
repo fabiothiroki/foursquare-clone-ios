@@ -53,6 +53,7 @@ extension PlacesService: TargetType {
         return [
             "v": "20171029",
             "venuePhotos": 1,
+            "limit": 10,
             "ll": String(format: "%f,%f", latitude, longitude),
             "client_id": ServicesContants.foursquareClientId,
             "client_secret": ServicesContants.foursquareClientSecret]

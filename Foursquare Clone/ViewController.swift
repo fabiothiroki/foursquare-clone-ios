@@ -26,10 +26,7 @@ class ViewController: UIViewController {
         }).disposed(by: disposeBag)
 
         _ = provider.rx.request(.recommended(latitude: -23.5666151, longitude: -46.6463977))
-            .map(to: [Group].self, keyPath: "response.groups")
-            .map({ (groups) -> [Place] in
-                return groups.first?.places ?? []
-            })
+            .map(to: LocationPlaces.self, keyPath: "response")
             .subscribe(onSuccess: { (place) in
                 print(place)
             }, onError: { (error) in
