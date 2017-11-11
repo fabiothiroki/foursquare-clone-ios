@@ -14,16 +14,11 @@ import Moya_ModelMapper
 
 class ViewController: UIViewController {
 
-    let locationService = UserLocationService.init(locationManager: CLLocationManager())
-    let provider: MoyaProvider<PlacesService> = MoyaProvider<PlacesService>()
+    let provider: MoyaProvider<PlacesApi> = MoyaProvider<PlacesApi>()
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        locationService.getUserLocation().subscribe(onNext: { (location) in
-           print(location)
-        }).disposed(by: disposeBag)
 
         _ = provider.rx.request(.recommended(latitude: -23.5666151, longitude: -46.6463977))
             .map(to: LocationPlaces.self, keyPath: "response")

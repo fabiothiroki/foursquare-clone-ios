@@ -9,11 +9,11 @@
 import Foundation
 import Moya
 
-enum PlacesService {
+enum PlacesApi {
     case recommended(latitude: Double, longitude: Double)
 }
 
-extension PlacesService: TargetType {
+extension PlacesApi: TargetType {
     var baseURL: URL {
          return URL(string: "https://api.foursquare.com/v2")!
     }

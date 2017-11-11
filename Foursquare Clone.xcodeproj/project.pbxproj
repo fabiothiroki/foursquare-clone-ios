@@ -151,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BEF7B5391FA01EE6007157AB /* Models */,
+				BEBF8F221FB735EC0001EB4F /* Networking */,
 				BECD03371F8DCE3D00470DAF /* Services */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
 				BE9C83E91F8AE1D200A5401F /* ViewController.swift */,
@@ -171,6 +172,14 @@
 			path = "Foursquare CloneTests";
 			sourceTree = "<group>";
 		};
+		BEBF8F221FB735EC0001EB4F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BEF7B53A1FA02A70007157AB /* PlacesService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		BECD03361F8C785000470DAF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				BECD03391F8DCEE900470DAF /* UserLocationService.swift */,
-				BEF7B53A1FA02A70007157AB /* PlacesService.swift */,
 				BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */,
 			);
 			path = Services;
