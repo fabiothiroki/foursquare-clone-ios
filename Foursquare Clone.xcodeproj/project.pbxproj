@@ -8,18 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		4645BFFD65E5E574348C6C7F /* Pods_Foursquare_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */; };
+		BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
+		BE2E0F801FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
+		BE2E0F821FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
+		BE2E0F831FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
 		BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
 		BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
 		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
 		BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */; };
 		BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */; };
+		BEBF8F141FB2A1630001EB4F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F131FB2A1630001EB4F /* Category.swift */; };
+		BEBF8F151FB2A1630001EB4F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F131FB2A1630001EB4F /* Category.swift */; };
+		BEBF8F171FB3E4560001EB4F /* PhotoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */; };
+		BEBF8F181FB3E4560001EB4F /* PhotoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */; };
+		BEBF8F1A1FB3E46A0001EB4F /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F191FB3E46A0001EB4F /* PhotoItem.swift */; };
+		BEBF8F1B1FB3E46A0001EB4F /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F191FB3E46A0001EB4F /* PhotoItem.swift */; };
+		BEBF8F1D1FB3F42E0001EB4F /* LocationPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F1C1FB3F42E0001EB4F /* LocationPlaces.swift */; };
+		BEBF8F1E1FB3F42E0001EB4F /* LocationPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F1C1FB3F42E0001EB4F /* LocationPlaces.swift */; };
+		BEBF8F201FB400600001EB4F /* PlaceTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F1F1FB400600001EB4F /* PlaceTip.swift */; };
+		BEBF8F211FB400600001EB4F /* PlaceTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F1F1FB400600001EB4F /* PlaceTip.swift */; };
 		BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03391F8DCEE900470DAF /* UserLocationService.swift */; };
 		BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03391F8DCEE900470DAF /* UserLocationService.swift */; };
 		BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */; };
 		BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD03421F8DD47400470DAF /* LocationManagerMock.swift */; };
-		BEF7B53B1FA02A70007157AB /* NearbyPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */; };
-		BEF7B53C1FA02A70007157AB /* NearbyPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */; };
+		BEF7B53B1FA02A70007157AB /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B53A1FA02A70007157AB /* PlacesService.swift */; };
+		BEF7B53C1FA02A70007157AB /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B53A1FA02A70007157AB /* PlacesService.swift */; };
 		BEF7B53E1FA16782007157AB /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B53D1FA16782007157AB /* SwinjectStoryboard+Setup.swift */; };
+		BEF7B5431FA63EF5007157AB /* ServicesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */; };
+		BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */; };
 		F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +55,8 @@
 		359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_CloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA2435F526F3E0B15602C48 /* Pods-Foursquare CloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneUITests/Pods-Foursquare CloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		987B857AEA84AF395D53BA4A /* Pods_Foursquare_CloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_CloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2E0F7E1FA80204002A5494 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		BE2E0F811FA8192D002A5494 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		BE9C83E41F8AE1D200A5401F /* Foursquare Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foursquare Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9C83E91F8AE1D200A5401F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,11 +66,17 @@
 		BE9C83F31F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9C83F81F8AE1D300A5401F /* Foursquare CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Foursquare CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83FE1F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEBF8F131FB2A1630001EB4F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGroup.swift; sourceTree = "<group>"; };
+		BEBF8F191FB3E46A0001EB4F /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
+		BEBF8F1C1FB3F42E0001EB4F /* LocationPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPlaces.swift; sourceTree = "<group>"; };
+		BEBF8F1F1FB400600001EB4F /* PlaceTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTip.swift; sourceTree = "<group>"; };
 		BECD03391F8DCEE900470DAF /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
 		BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceSpec.swift; sourceTree = "<group>"; };
 		BECD03421F8DD47400470DAF /* LocationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerMock.swift; sourceTree = "<group>"; };
-		BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesService.swift; sourceTree = "<group>"; };
+		BEF7B53A1FA02A70007157AB /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 		BEF7B53D1FA16782007157AB /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
+		BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesConstants.swift; sourceTree = "<group>"; };
 		E89B84E07B99D63BA61C5E57 /* Pods-Foursquare CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B53916F13256DA67DF44D /* Pods-Foursquare CloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BEF7B5391FA01EE6007157AB /* Models */,
+				BEBF8F221FB735EC0001EB4F /* Networking */,
 				BECD03371F8DCE3D00470DAF /* Services */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
 				BE9C83E91F8AE1D200A5401F /* ViewController.swift */,
@@ -147,6 +172,14 @@
 			path = "Foursquare CloneTests";
 			sourceTree = "<group>";
 		};
+		BEBF8F221FB735EC0001EB4F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BEF7B53A1FA02A70007157AB /* PlacesService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		BECD03361F8C785000470DAF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				BECD03391F8DCEE900470DAF /* UserLocationService.swift */,
-				BEF7B53A1FA02A70007157AB /* NearbyPlacesService.swift */,
+				BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -177,6 +210,13 @@
 		BEF7B5391FA01EE6007157AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE2E0F7E1FA80204002A5494 /* Place.swift */,
+				BE2E0F811FA8192D002A5494 /* Group.swift */,
+				BEBF8F131FB2A1630001EB4F /* Category.swift */,
+				BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */,
+				BEBF8F191FB3E46A0001EB4F /* PhotoItem.swift */,
+				BEBF8F1C1FB3F42E0001EB4F /* LocationPlaces.swift */,
+				BEBF8F1F1FB400600001EB4F /* PlaceTip.swift */,
 			);
 			path = Models;
 			sourceTree = SOURCE_ROOT;
@@ -295,7 +335,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare Clone/Pods-Foursquare Clone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya.default-RxSwift/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -307,7 +349,9 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -378,9 +422,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-Core-RxSwift/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -423,10 +476,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBF8F1D1FB3F42E0001EB4F /* LocationPlaces.swift in Sources */,
 				BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
+				BEF7B5431FA63EF5007157AB /* ServicesConstants.swift in Sources */,
+				BEBF8F201FB400600001EB4F /* PlaceTip.swift in Sources */,
+				BEBF8F1A1FB3E46A0001EB4F /* PhotoItem.swift in Sources */,
 				BEF7B53E1FA16782007157AB /* SwinjectStoryboard+Setup.swift in Sources */,
+				BE2E0F821FA8192D002A5494 /* Group.swift in Sources */,
 				BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */,
-				BEF7B53B1FA02A70007157AB /* NearbyPlacesService.swift in Sources */,
+				BEBF8F141FB2A1630001EB4F /* Category.swift in Sources */,
+				BEF7B53B1FA02A70007157AB /* PlacesService.swift in Sources */,
+				BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */,
+				BEBF8F171FB3E4560001EB4F /* PhotoGroup.swift in Sources */,
 				BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,10 +496,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2E0F831FA8192D002A5494 /* Group.swift in Sources */,
+				BEBF8F1B1FB3E46A0001EB4F /* PhotoItem.swift in Sources */,
 				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
-				BEF7B53C1FA02A70007157AB /* NearbyPlacesService.swift in Sources */,
+				BEF7B53C1FA02A70007157AB /* PlacesService.swift in Sources */,
+				BEBF8F1E1FB3F42E0001EB4F /* LocationPlaces.swift in Sources */,
+				BE2E0F801FA80204002A5494 /* Place.swift in Sources */,
+				BEBF8F211FB400600001EB4F /* PlaceTip.swift in Sources */,
+				BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */,
+				BEBF8F181FB3E4560001EB4F /* PhotoGroup.swift in Sources */,
 				BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */,
+				BEBF8F151FB2A1630001EB4F /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
