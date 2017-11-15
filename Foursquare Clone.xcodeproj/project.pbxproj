@@ -38,6 +38,10 @@
 		BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */; };
 		BEF8C8E31FBCE25500A756C5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8E21FBCE25500A756C5 /* AppState.swift */; };
 		BEF8C8E41FBCE25500A756C5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8E21FBCE25500A756C5 /* AppState.swift */; };
+		BEF8C8E71FBCF3D700A756C5 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8E61FBCF3D700A756C5 /* AppReducer.swift */; };
+		BEF8C8E81FBCF3D700A756C5 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8E61FBCF3D700A756C5 /* AppReducer.swift */; };
+		BEF8C8EB1FBD03EC00A756C5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */; };
+		BEF8C8EC1FBD03EC00A756C5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */; };
 		F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +84,8 @@
 		BEF7B53D1FA16782007157AB /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesConstants.swift; sourceTree = "<group>"; };
 		BEF8C8E21FBCE25500A756C5 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BEF8C8E61FBCF3D700A756C5 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		E89B84E07B99D63BA61C5E57 /* Pods-Foursquare CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B53916F13256DA67DF44D /* Pods-Foursquare CloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +159,10 @@
 		BE9C83E61F8AE1D200A5401F /* Foursquare Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BEF8C8E91FBD03D700A756C5 /* Actions */,
 				BEF7B5391FA01EE6007157AB /* Models */,
 				BEBF8F221FB735EC0001EB4F /* Networking */,
+				BEF8C8E51FBCF3BC00A756C5 /* Reducers */,
 				BECD03371F8DCE3D00470DAF /* Services */,
 				BEF8C8E11FBCE23700A756C5 /* State */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
@@ -231,6 +239,22 @@
 				BEF8C8E21FBCE25500A756C5 /* AppState.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		BEF8C8E51FBCF3BC00A756C5 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				BEF8C8E61FBCF3D700A756C5 /* AppReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		BEF8C8E91FBD03D700A756C5 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,6 +521,8 @@
 				BE2E0F821FA8192D002A5494 /* Group.swift in Sources */,
 				BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */,
 				BEBF8F141FB2A1630001EB4F /* Category.swift in Sources */,
+				BEF8C8EB1FBD03EC00A756C5 /* Actions.swift in Sources */,
+				BEF8C8E71FBCF3D700A756C5 /* AppReducer.swift in Sources */,
 				BEF8C8E31FBCE25500A756C5 /* AppState.swift in Sources */,
 				BEF7B53B1FA02A70007157AB /* PlacesService.swift in Sources */,
 				BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */,
@@ -509,8 +535,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF8C8EC1FBD03EC00A756C5 /* Actions.swift in Sources */,
 				BE2E0F831FA8192D002A5494 /* Group.swift in Sources */,
 				BEBF8F1B1FB3E46A0001EB4F /* PhotoItem.swift in Sources */,
+				BEF8C8E81FBCF3D700A756C5 /* AppReducer.swift in Sources */,
 				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
 				BEF7B53C1FA02A70007157AB /* PlacesService.swift in Sources */,

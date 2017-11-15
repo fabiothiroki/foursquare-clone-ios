@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
