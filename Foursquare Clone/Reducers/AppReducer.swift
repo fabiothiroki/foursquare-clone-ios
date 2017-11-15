@@ -11,5 +11,14 @@ import ReSwift
 
 func appReducer(action: Action, state: FetchedPlacesState?) -> FetchedPlacesState {
 
-    return state ?? FetchedPlacesState(places: .loading)
+    switch action {
+    case _ as FetchPlacesAction:
+        break
+    case let action as SetPlacesAction:
+        return FetchedPlacesState(places: Result.finished(action.places))
+    default:
+        break
+    }
+
+    return FetchedPlacesState(places: .loading)
 }
