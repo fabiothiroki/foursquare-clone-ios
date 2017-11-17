@@ -9,16 +9,24 @@
 import Foundation
 import ReSwift
 
-func appReducer(action: Action, state: FetchedPlacesState?) -> FetchedPlacesState {
-
-    switch action {
-    case _ as FetchPlacesAction:
-        break
-    case let action as SetPlacesAction:
-        return FetchedPlacesState(places: Result.finished(action.places))
-    default:
-        break
+struct AppReducer {
+    
+    let userLocationService: UserLocationService
+    
+    init(userLocationService: UserLocationService) {
+        self.userLocationService = userLocationService
     }
 
-    return FetchedPlacesState(places: .loading)
+    func reducer(action: Action, state: FetchedPlacesState?) -> FetchedPlacesState {
+        switch action {
+        case _ as FetchPlacesAction:
+            break
+        case let action as SetPlacesAction:
+            return FetchedPlacesState(places: Result.finished(action.places))
+        default:
+            break
+        }
+
+        return FetchedPlacesState(places: .loading)
+    }
 }

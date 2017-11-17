@@ -14,6 +14,21 @@ extension SwinjectStoryboard {
     class func setup() {
         defaultContainer.storyboardInitCompleted(ViewController.self) { resolver, container in
         }
+
+        setupLocationDependencies()
+        setupReducer()
     }
 
+    class func setupLocationDependencies() {
+        defaultContainer.register(LocationManager.self) { _ in CLLocationManager() }
+        defaultContainer.register(UserLocationService.self) { resolver in
+            UserLocationService.init(locationManager: resolver.resolve(LocationManager.self)!)
+        }
+    }
+
+    class func setupReducer() {
+        defaultContainer.register(AppReducer.self) { resolver in
+            AppReducer.init(userLocationService: resolver.resolve(UserLocationService.self)!)
+        }
+    }
 }

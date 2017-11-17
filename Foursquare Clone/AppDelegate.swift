@@ -9,7 +9,7 @@
 import UIKit
 import ReSwift
 
-let store = Store<FetchedPlacesState>(reducer: appReducer, state: nil)
+//let store = Store<FetchedPlacesState>(reducer: AppReducer().reducer, state: nil)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
