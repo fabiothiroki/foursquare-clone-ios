@@ -9,6 +9,9 @@
 import Swinject
 import SwinjectStoryboard
 import CoreLocation
+import Moya
+import Moya_ModelMapper
+import ReSwift
 
 extension SwinjectStoryboard {
     class func setup() {
@@ -27,8 +30,18 @@ extension SwinjectStoryboard {
     }
 
     class func setupReducer() {
+        defaultContainer.register(Store<FetchedPlacesState>.self) { resolver in
+            Store<FetchedPlacesState>(reducer: (resolver.resolve(AppReducer.self)!).reduce, state: nil)
+        }.inObjectScope(.container)
+
+        defaultContainer.register(MoyaProvider<PlacesApi>.self) { _ in MoyaProvider<PlacesApi>() }
+
         defaultContainer.register(AppReducer.self) { resolver in
-            AppReducer.init(userLocationService: resolver.resolve(UserLocationService.self)!)
-        }
+            AppReducer.init(userLocationService: resolver.resolve(UserLocationService.self)!,
+                            provider: resolver.resolve(MoyaProvider<PlacesApi>.self)!)
+            }.initCompleted { (resolver, appReducer) in
+                var reducer = appReducer
+                reducer.store = resolver.resolve(Store<FetchedPlacesState>.self)
+            }
     }
 }
