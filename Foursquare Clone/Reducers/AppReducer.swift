@@ -35,7 +35,7 @@ struct AppReducer {
                     print("user location")
                     print(userLocation)
                     return self.provider.rx.request(.recommended(latitude: userLocation.coordinate.latitude,
-                                                                 longitude: userLocation.coordinate.latitude))
+                                                                 longitude: userLocation.coordinate.longitude))
                     .map(to: LocationPlaces.self, keyPath: "response")
                 })
                 .subscribe({ (event) in

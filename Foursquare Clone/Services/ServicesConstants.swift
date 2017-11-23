@@ -7,6 +7,6 @@
 //
 
 struct ServicesContants {
-    static let foursquareClientId = "HJDPKVSF0QBHVMULYBT304U3CPNXXWO40IJBVJWBN115HE20"
-    static let foursquareClientSecret = "AKW2YJIEDA0U0GYCY5JTJFS0K2RKZYZPGOCFGENECWS1WOSB"
+    static let foursquareClientId = ""
+    static let foursquareClientSecret = ""
 }

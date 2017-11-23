@@ -39,7 +39,8 @@ extension PlacesApi: TargetType {
     var task: Task {
         switch self {
         case let .recommended(latitude, longitude):
-            return .requestParameters(parameters: requestParameters(latitude: latitude, longitude: longitude),
+            let parameters = requestParameters(latitude: latitude, longitude: longitude)
+            return .requestParameters(parameters: parameters,
                                       encoding: URLEncoding.queryString)
 
         }
