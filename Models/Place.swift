@@ -25,7 +25,7 @@ struct Place: Mappable {
         let photoGroup: [PhotoGroup] = try map.from("venue.photos.groups")
         imageUrl = photoGroup.first?.items.first?.imageUrl ?? ""
 
-        let placeTip: [PlaceTip] = try map.from("tips")
-        description = placeTip.first?.text ?? ""
+        let placeTip: [PlaceTip]? = try map.optionalFrom("tips")
+        description = placeTip?.first?.text ?? ""
     }
 }

@@ -31,6 +31,9 @@ struct AppReducer {
         case _ as FetchPlacesAction:
             _ = userLocationService.getUserLocation()
                 .flatMap({ (userLocation: CLLocation) -> Single<LocationPlaces> in
+                    print("")
+                    print("user location")
+                    print(userLocation)
                     return self.provider.rx.request(.recommended(latitude: userLocation.coordinate.latitude,
                                                                  longitude: userLocation.coordinate.latitude))
                     .map(to: LocationPlaces.self, keyPath: "response")
@@ -38,8 +41,13 @@ struct AppReducer {
                 .subscribe({ (event) in
                     switch event {
                     case .next(let places):
+                        print("")
+                        print("places")
+                        print(places)
                         self.store?.dispatch(SetPlacesAction(places: places))
                     case .error(let error):
+                        print("")
+                        print(error)
                         self.store?.dispatch(SetErrorAction(error: error))
                     case .completed:
                         break
