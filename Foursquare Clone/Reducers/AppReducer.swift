@@ -17,6 +17,7 @@ struct AppReducer {
 
     let userLocationService: UserLocationService
     let provider: MoyaProvider<PlacesApi>
+    let disposeBag = DisposeBag()
     weak var store: Store<FetchedPlacesState>?
 
     init(userLocationService: UserLocationService,
@@ -36,16 +37,14 @@ struct AppReducer {
                 })
                 .subscribe({ (event) in
                     switch event {
-                    case .next(_):
-//                        store.dispatch(SetPlacesAction(places: Element))
-                        break
-                    case .error(_):
-                        break
+                    case .next(let places):
+                        self.store?.dispatch(SetPlacesAction(places: places))
+                    case .error(let error):
+                        self.store?.dispatch(SetErrorAction(error: error))
                     case .completed:
                         break
                     }
-                })
-            break
+                }).disposed(by: disposeBag)
         case let action as SetPlacesAction:
             return FetchedPlacesState(places: Result.finished(action.places))
         default:

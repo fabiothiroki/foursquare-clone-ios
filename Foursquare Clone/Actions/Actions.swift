@@ -13,3 +13,7 @@ struct FetchPlacesAction: Action {}
 struct SetPlacesAction: Action {
     let places: LocationPlaces
 }
+
+struct SetErrorAction: Action {
+    let error: Error
+}
