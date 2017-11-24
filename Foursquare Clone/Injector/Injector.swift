@@ -16,16 +16,12 @@ import ReSwift
 
 struct Injector {
 
-    private let container: Container = Container()
-    
+    let container: Container = Container()
+
     func setup() {
         setupControllers()
         setupLocationDependencies()
         setupState()
-    }
-
-    func getContainer() -> Container {
-        return container
     }
 
     private func setupControllers() {
@@ -57,6 +53,5 @@ struct Injector {
         container.register(Store<FetchedPlacesState>.self) { resolver in
             Store<FetchedPlacesState>(reducer: (resolver.resolve(AppReducer.self)!).reduce, state: nil)
             }.inObjectScope(.container)
-
-    }    
+    }
 }

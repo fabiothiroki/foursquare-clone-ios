@@ -16,11 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions
-        launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {    
+        launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        injector.setup()
+
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         self.window = window
-        window.rootViewController = injector.getContainer().resolve(ViewController.self)
+        window.rootViewController = injector.container.resolve(ViewController.self)
         return true
     }
 }
