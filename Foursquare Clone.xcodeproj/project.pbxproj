@@ -12,6 +12,7 @@
 		BE2E0F801FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
 		BE2E0F821FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
 		BE2E0F831FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
+		BE3B6B691FC7B1BB00ECE416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
 		BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
 		BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
 		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
@@ -544,6 +545,7 @@
 				BEF7B53C1FA02A70007157AB /* PlacesService.swift in Sources */,
 				BEC1FE011FC7A6A20062B64F /* Injector.swift in Sources */,
 				BEBF8F1E1FB3F42E0001EB4F /* LocationPlaces.swift in Sources */,
+				BE3B6B691FC7B1BB00ECE416 /* ViewController.swift in Sources */,
 				BE2E0F801FA80204002A5494 /* Place.swift in Sources */,
 				BEBF8F211FB400600001EB4F /* PlaceTip.swift in Sources */,
 				BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */,
