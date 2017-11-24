@@ -16,12 +16,17 @@ import ReSwift
 
 struct Injector {
 
-    let container: Container = Container()
+    private let container: Container = Container()
 
     func setup() {
         setupControllers()
         setupLocationDependencies()
+        setupProvider()
         setupState()
+    }
+
+    func resolve<Service>(_ serviceType: Service.Type) -> Service? {
+        return container.resolve(serviceType)
     }
 
     private func setupControllers() {
@@ -39,8 +44,11 @@ struct Injector {
         }
     }
 
-    private func setupState() {
+    private func setupProvider() {
         container.register(MoyaProvider<PlacesApi>.self) { _ in MoyaProvider<PlacesApi>() }
+    }
+
+    private func setupState() {
 
         container.register(AppReducer.self) { resolver in
             AppReducer.init(userLocationService: resolver.resolve(UserLocationService.self)!,

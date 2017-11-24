@@ -13,6 +13,7 @@
 		BE2E0F821FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
 		BE2E0F831FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
 		BE3B6B691FC7B1BB00ECE416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
+		BE3B6B6E1FC7B8A800ECE416 /* InjectorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B6B6D1FC7B8A800ECE416 /* InjectorSpec.swift */; };
 		BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
 		BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
 		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		987B857AEA84AF395D53BA4A /* Pods_Foursquare_CloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_CloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2E0F7E1FA80204002A5494 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		BE2E0F811FA8192D002A5494 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		BE3B6B6D1FC7B8A800ECE416 /* InjectorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorSpec.swift; sourceTree = "<group>"; };
 		BE9C83E41F8AE1D200A5401F /* Foursquare Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foursquare Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9C83E91F8AE1D200A5401F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE3B6B6A1FC7B7D400ECE416 /* Injector */ = {
+			isa = PBXGroup;
+			children = (
+				BE3B6B6D1FC7B8A800ECE416 /* InjectorSpec.swift */,
+			);
+			path = Injector;
+			sourceTree = "<group>";
+		};
 		BE9C83DB1F8AE1D200A5401F = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 		BE9C83FB1F8AE1D300A5401F /* Foursquare CloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				BE3B6B6A1FC7B7D400ECE416 /* Injector */,
 				BECD033D1F8DCF7E00470DAF /* Services */,
 				BE9C83FE1F8AE1D300A5401F /* Info.plist */,
 			);
@@ -550,6 +561,7 @@
 				BEBF8F211FB400600001EB4F /* PlaceTip.swift in Sources */,
 				BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */,
 				BEBF8F181FB3E4560001EB4F /* PhotoGroup.swift in Sources */,
+				BE3B6B6E1FC7B8A800ECE416 /* InjectorSpec.swift in Sources */,
 				BEF8C8E41FBCE25500A756C5 /* AppState.swift in Sources */,
 				BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */,
 				BEBF8F151FB2A1630001EB4F /* Category.swift in Sources */,

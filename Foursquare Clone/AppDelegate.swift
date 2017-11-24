@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         self.window = window
-        window.rootViewController = injector.container.resolve(ViewController.self)
+        window.rootViewController = injector.resolve(ViewController.self)
         return true
     }
 }
