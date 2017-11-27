@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import Moya
+import ReSwift
 
 class InjectorSpec: XCTestCase {
 
@@ -28,5 +30,20 @@ class InjectorSpec: XCTestCase {
         let userLocationService = injector.resolve(UserLocationService.self)
         XCTAssertNotNil(locationManager)
         XCTAssertNotNil(userLocationService)
+    }
+
+    func testShouldResolveProvider() {
+        let provider = injector.resolve(MoyaProvider<PlacesApi>.self)
+        XCTAssertNotNil(provider)
+    }
+
+    func testShouldResolveReducer() {
+        let reducer = injector.resolve(AppReducer.self)
+        XCTAssertNotNil(reducer)
+    }
+
+    func testShouldResolveState() {
+        let store = injector.resolve(Store<FetchedPlacesState>.self)
+        XCTAssertNotNil(store)
     }
 }

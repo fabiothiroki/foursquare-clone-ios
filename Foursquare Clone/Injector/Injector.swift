@@ -22,6 +22,7 @@ struct Injector {
         setupControllers()
         setupLocationDependencies()
         setupProvider()
+        setupReducer()
         setupState()
     }
 
@@ -48,8 +49,7 @@ struct Injector {
         container.register(MoyaProvider<PlacesApi>.self) { _ in MoyaProvider<PlacesApi>() }
     }
 
-    private func setupState() {
-
+    private func setupReducer() {
         container.register(AppReducer.self) { resolver in
             AppReducer.init(userLocationService: resolver.resolve(UserLocationService.self)!,
                             provider: resolver.resolve(MoyaProvider<PlacesApi>.self)!)
@@ -57,7 +57,9 @@ struct Injector {
                 var reducer = appReducer
                 reducer.store = resolver.resolve(Store<FetchedPlacesState>.self)
         }
+    }
 
+    private func setupState() {
         container.register(Store<FetchedPlacesState>.self) { resolver in
             Store<FetchedPlacesState>(reducer: (resolver.resolve(AppReducer.self)!).reduce, state: nil)
             }.inObjectScope(.container)
