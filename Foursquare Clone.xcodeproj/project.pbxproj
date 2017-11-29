@@ -14,6 +14,10 @@
 		BE2E0F831FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
 		BE3B6B691FC7B1BB00ECE416 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
 		BE3B6B6E1FC7B8A800ECE416 /* InjectorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B6B6D1FC7B8A800ECE416 /* InjectorSpec.swift */; };
+		BE3C738C1FCE3FB000F37C7F /* NearbyPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C738B1FCE3FB000F37C7F /* NearbyPlacesService.swift */; };
+		BE3C738D1FCE3FB000F37C7F /* NearbyPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C738B1FCE3FB000F37C7F /* NearbyPlacesService.swift */; };
+		BE3C738F1FCE476A00F37C7F /* NearbyPlacesServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C738E1FCE476A00F37C7F /* NearbyPlacesServiceSpec.swift */; };
+		BE3C73911FCE480400F37C7F /* PlacesApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C73901FCE480400F37C7F /* PlacesApiMock.swift */; };
 		BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
 		BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E91F8AE1D200A5401F /* ViewController.swift */; };
 		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
@@ -67,6 +71,9 @@
 		BE2E0F7E1FA80204002A5494 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		BE2E0F811FA8192D002A5494 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		BE3B6B6D1FC7B8A800ECE416 /* InjectorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorSpec.swift; sourceTree = "<group>"; };
+		BE3C738B1FCE3FB000F37C7F /* NearbyPlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NearbyPlacesService.swift; path = "Foursquare Clone/Services/NearbyPlacesService.swift"; sourceTree = SOURCE_ROOT; };
+		BE3C738E1FCE476A00F37C7F /* NearbyPlacesServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesServiceSpec.swift; sourceTree = "<group>"; };
+		BE3C73901FCE480400F37C7F /* PlacesApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApiMock.swift; sourceTree = "<group>"; };
 		BE9C83E41F8AE1D200A5401F /* Foursquare Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foursquare Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9C83E91F8AE1D200A5401F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +223,7 @@
 		BECD03371F8DCE3D00470DAF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BE3C738B1FCE3FB000F37C7F /* NearbyPlacesService.swift */,
 				BECD03391F8DCEE900470DAF /* UserLocationService.swift */,
 				BEF7B5421FA63EF5007157AB /* ServicesConstants.swift */,
 			);
@@ -227,6 +235,8 @@
 			children = (
 				BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */,
 				BECD03421F8DD47400470DAF /* LocationManagerMock.swift */,
+				BE3C738E1FCE476A00F37C7F /* NearbyPlacesServiceSpec.swift */,
+				BE3C73901FCE480400F37C7F /* PlacesApiMock.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -528,6 +538,7 @@
 				BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BEF7B5431FA63EF5007157AB /* ServicesConstants.swift in Sources */,
 				BEBF8F201FB400600001EB4F /* PlaceTip.swift in Sources */,
+				BE3C738C1FCE3FB000F37C7F /* NearbyPlacesService.swift in Sources */,
 				BEBF8F1A1FB3E46A0001EB4F /* PhotoItem.swift in Sources */,
 				BE2E0F821FA8192D002A5494 /* Group.swift in Sources */,
 				BE9C83EA1F8AE1D200A5401F /* ViewController.swift in Sources */,
@@ -548,9 +559,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF8C8EC1FBD03EC00A756C5 /* Actions.swift in Sources */,
+				BE3C73911FCE480400F37C7F /* PlacesApiMock.swift in Sources */,
+				BE3C738F1FCE476A00F37C7F /* NearbyPlacesServiceSpec.swift in Sources */,
 				BE2E0F831FA8192D002A5494 /* Group.swift in Sources */,
 				BEBF8F1B1FB3E46A0001EB4F /* PhotoItem.swift in Sources */,
 				BEF8C8E81FBCF3D700A756C5 /* AppReducer.swift in Sources */,
+				BE3C738D1FCE3FB000F37C7F /* NearbyPlacesService.swift in Sources */,
 				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
 				BEF7B53C1FA02A70007157AB /* PlacesService.swift in Sources */,
