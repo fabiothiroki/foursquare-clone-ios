@@ -15,23 +15,43 @@ import Moya
 class NearbyPlacesServiceSpec: XCTestCase {
 
     private var container: Container!
-    private var placesDataSource: PlacesApiMock!
+    private var placesDatasource: PlacesApiMock!
+    private var userLocationDatasource: UserLocationServiceMock!
+    private var nearbyPlacesService: NearbyPlacesService!
 
     override func setUp() {
         super.setUp()
 
         container = Container()
-        container.register(LocationManager.self) { _ in LocationManagerMock() }
+        container.register(UserLocationDatasource.self) { _ in UserLocationServiceMock() }
             .inObjectScope(.container)
-        container.register(UserLocationService.self) { resolver in
-            UserLocationService.init(locationManager: resolver.resolve(LocationManager.self)!)
-        }
         container.register(PlacesDatasource.self) { _ in PlacesApiMock()}
+            .inObjectScope(.container)
+        container.register(NearbyPlacesService.self) { resolver in
+            NearbyPlacesService.init(userLocationDatasource: resolver.resolve(UserLocationDatasource.self)!,
+                                     placesDatasource: resolver.resolve(PlacesDatasource.self)!)}
 
-        placesDataSource = container.resolve(PlacesDatasource.self)! as? PlacesApiMock
+        placesDatasource = container.resolve(PlacesDatasource.self)! as? PlacesApiMock
+        userLocationDatasource = container.resolve(UserLocationDatasource.self)! as? UserLocationServiceMock
+        nearbyPlacesService = container.resolve(NearbyPlacesService.self)
     }
 
-    func testShouldResolvePlacesApiMock() {
-        XCTAssertNotNil(placesDataSource)
+    func testShouldResolveDependencies() {
+        XCTAssertNotNil(placesDatasource)
+        XCTAssertNotNil(userLocationDatasource)
+        XCTAssertNotNil(nearbyPlacesService)
+    }
+
+    func testShouldRequestPlacesNearbyUserLocation() {
+        nearbyPlacesService.fetchNearbyPlaces()
+            .subscribe(onNext: { (places) in
+                print(places)
+            })
+
+        let mockUserLatitude = userLocationDatasource.location.coordinate.latitude
+        let mockUserLongitude = userLocationDatasource.location.coordinate.longitude
+
+        XCTAssertEqual(placesDatasource.requestedLatitude, mockUserLatitude)
+        XCTAssertEqual(placesDatasource.requestedLongitude, mockUserLongitude)
     }
 }

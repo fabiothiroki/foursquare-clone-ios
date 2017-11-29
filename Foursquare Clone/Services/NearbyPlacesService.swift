@@ -14,22 +14,22 @@ import CoreLocation
 
 struct NearbyPlacesService {
 
-    private let placesService: PlacesService
-    private let userLocationService: UserLocationService
+    private let placesDatasource: PlacesDatasource
+    private let userLocationDatasource: UserLocationDatasource
 
-    init(userLocationService: UserLocationService,
-         placesService: PlacesService) {
-        self.userLocationService = userLocationService
-        self.placesService = placesService
+    init(userLocationDatasource: UserLocationDatasource,
+         placesDatasource: PlacesDatasource) {
+        self.userLocationDatasource = userLocationDatasource
+        self.placesDatasource = placesDatasource
     }
 
     func fetchNearbyPlaces() -> Observable<LocationPlaces> {
-        return userLocationService.getUserLocation()
+        return userLocationDatasource.getUserLocation()
             .flatMap({ (userLocation: CLLocation) -> Observable<LocationPlaces> in
                 print("")
                 print("user location")
                 print(userLocation)
-                return self.placesService.placesAround(latitude: userLocation.coordinate.latitude,
+                return self.placesDatasource.placesAround(latitude: userLocation.coordinate.latitude,
                                                        longitude: userLocation.coordinate.longitude)
             })
     }
