@@ -7,9 +7,17 @@
 //
 
 import Foundation
-import Moya
 import RxSwift
-import Moya_ModelMapper
 
-struct PlacesApiMock{
+class PlacesApiMock: PlacesDatasource {
+
+    var requestedLatitude: Double?
+    var requestedLongitude: Double?
+
+    func placesAround(latitude: Double, longitude: Double) -> Observable<LocationPlaces> {
+        requestedLatitude = latitude
+        requestedLongitude = longitude
+
+        return Observable.of(LocationPlaces())
+    }
 }

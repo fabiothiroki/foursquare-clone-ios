@@ -15,6 +15,7 @@ import Moya
 class NearbyPlacesServiceSpec: XCTestCase {
 
     private var container: Container!
+    private var placesDataSource: PlacesApiMock!
 
     override func setUp() {
         super.setUp()
@@ -25,10 +26,12 @@ class NearbyPlacesServiceSpec: XCTestCase {
         container.register(UserLocationService.self) { resolver in
             UserLocationService.init(locationManager: resolver.resolve(LocationManager.self)!)
         }
+        container.register(PlacesDatasource.self) { _ in PlacesApiMock()}
+
+        placesDataSource = container.resolve(PlacesDatasource.self)
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testShouldResolvePlacesApiMock() {
+        XCTAssertNotNil(placesDataSource)
     }
 }

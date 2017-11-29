@@ -14,25 +14,23 @@ import CoreLocation
 
 struct NearbyPlacesService {
 
-    private let provider: MoyaProvider<PlacesApi>
+    private let placesService: PlacesService
     private let userLocationService: UserLocationService
 
     init(userLocationService: UserLocationService,
-         provider: MoyaProvider<PlacesApi>) {
+         placesService: PlacesService) {
         self.userLocationService = userLocationService
-        self.provider = provider
+        self.placesService = placesService
     }
 
     func fetchNearbyPlaces() -> Observable<LocationPlaces> {
         return userLocationService.getUserLocation()
-            .flatMap({ (userLocation: CLLocation) -> Single<LocationPlaces> in
+            .flatMap({ (userLocation: CLLocation) -> Observable<LocationPlaces> in
                 print("")
                 print("user location")
                 print(userLocation)
-                return self.provider.rx.request(.recommended(latitude: userLocation.coordinate.latitude,
-                                                                  longitude: userLocation.coordinate.longitude),
-                                                     callbackQueue: nil)
-                    .map(to: LocationPlaces.self, keyPath: "response")
+                return self.placesService.placesAround(latitude: userLocation.coordinate.latitude,
+                                                       longitude: userLocation.coordinate.longitude)
             })
     }
 }

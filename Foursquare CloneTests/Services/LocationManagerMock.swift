@@ -10,8 +10,8 @@ import CoreLocation
 
 class LocationManagerMock: LocationManager {
 
-    public var calledRequestWhenInUseAuthorization = false
-    public var calledRequestLocation = false
+    var calledRequestWhenInUseAuthorization = false
+    var calledRequestLocation = false
 
     weak var delegate: CLLocationManagerDelegate?
 

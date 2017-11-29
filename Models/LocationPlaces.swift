@@ -19,4 +19,9 @@ struct LocationPlaces: Mappable {
 
         try headerFullLocation = map.from("headerFullLocation")
     }
+
+    init() {
+        places = []
+        headerFullLocation = ""
+    }
 }
