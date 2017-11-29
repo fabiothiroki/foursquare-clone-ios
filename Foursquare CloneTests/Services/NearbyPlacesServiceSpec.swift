@@ -28,7 +28,7 @@ class NearbyPlacesServiceSpec: XCTestCase {
         }
         container.register(PlacesDatasource.self) { _ in PlacesApiMock()}
 
-        placesDataSource = container.resolve(PlacesDatasource.self)
+        placesDataSource = container.resolve(PlacesDatasource.self)! as? PlacesApiMock
     }
 
     func testShouldResolvePlacesApiMock() {
