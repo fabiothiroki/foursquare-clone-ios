@@ -9,23 +9,28 @@
 import UIKit
 import CoreLocation
 import RxSwift
-import Moya
-import Moya_ModelMapper
+import ReSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StoreSubscriber {
 
-    let provider: MoyaProvider<PlacesApi> = MoyaProvider<PlacesApi>()
-    let disposeBag = DisposeBag()
+    var store: Store<FetchedPlacesState>?
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        store?.subscribe(self)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        store?.unsubscribe(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        store?.dispatch(FetchPlacesAction())
+    }
 
-        _ = provider.rx.request(.recommended(latitude: -23.5666151, longitude: -46.6463977))
-            .map(to: LocationPlaces.self, keyPath: "response")
-            .subscribe(onSuccess: { (place) in
-                print(place)
-            }, onError: { (error) in
-                print(error)
-            })
+    func newState(state: FetchedPlacesState) {
+        print(state)
     }
 }
