@@ -27,7 +27,7 @@ class InjectorSpec: XCTestCase {
 
     func testShouldResolveLocationDependencies() {
         let locationManager = injector.resolve(LocationManager.self)
-        let userLocationService = injector.resolve(UserLocationService.self)
+        let userLocationService = injector.resolve(UserLocationDatasource.self)
         XCTAssertNotNil(locationManager)
         XCTAssertNotNil(userLocationService)
     }
