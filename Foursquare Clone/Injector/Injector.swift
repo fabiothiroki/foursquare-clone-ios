@@ -22,6 +22,7 @@ struct Injector {
         setupControllers()
         setupLocationDependencies()
         setupProvider()
+        setupNearbyPlacesService()
         setupReducer()
         setupState()
     }
@@ -40,7 +41,7 @@ struct Injector {
 
     private func setupLocationDependencies() {
         container.register(LocationManager.self) { _ in CLLocationManager() }
-        container.register(UserLocationService.self) { resolver in
+        container.register(UserLocationDatasource.self) { resolver in
             UserLocationService.init(locationManager: resolver.resolve(LocationManager.self)!)
         }
     }
@@ -49,10 +50,19 @@ struct Injector {
         container.register(MoyaProvider<PlacesApi>.self) { _ in MoyaProvider<PlacesApi>() }
     }
 
+    private func setupNearbyPlacesService() {
+        container.register(PlacesDatasource.self) { resolver in
+            PlacesService.init(provider: resolver.resolve(MoyaProvider<PlacesApi>.self)!)
+        }
+        container.register(NearbyPlacesService.self) { resolver in
+            NearbyPlacesService.init(userLocationDatasource: resolver.resolve(UserLocationDatasource.self)!,
+                                     placesDatasource: resolver.resolve(PlacesDatasource.self)!)
+        }
+    }
+
     private func setupReducer() {
         container.register(AppReducer.self) { resolver in
-            AppReducer.init(userLocationService: resolver.resolve(UserLocationService.self)!,
-                            provider: resolver.resolve(MoyaProvider<PlacesApi>.self)!)
+            AppReducer.init(resolver.resolve(NearbyPlacesService.self)!)
             }.initCompleted { (resolver, appReducer) in
                 var reducer = appReducer
                 reducer.store = resolver.resolve(Store<FetchedPlacesState>.self)
