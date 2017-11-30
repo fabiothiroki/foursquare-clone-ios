@@ -18,6 +18,7 @@ class NearbyPlacesServiceSpec: XCTestCase {
     private var placesDatasource: PlacesApiMock!
     private var userLocationDatasource: UserLocationServiceMock!
     private var nearbyPlacesService: NearbyPlacesService!
+    private let disposeBag = DisposeBag()
 
     override func setUp() {
         super.setUp()
@@ -43,10 +44,12 @@ class NearbyPlacesServiceSpec: XCTestCase {
     }
 
     func testShouldRequestPlacesNearbyUserLocation() {
-        nearbyPlacesService.fetchNearbyPlaces()
+        _ = nearbyPlacesService.fetchNearbyPlaces()
             .subscribe(onNext: { (places) in
-                print(places)
-            })
+                XCTAssertNotNil(places)
+            }, onError: { (_) in
+                XCTFail("Should not return error")
+            }).disposed(by: disposeBag)
 
         let mockUserLatitude = userLocationDatasource.location.coordinate.latitude
         let mockUserLongitude = userLocationDatasource.location.coordinate.longitude
