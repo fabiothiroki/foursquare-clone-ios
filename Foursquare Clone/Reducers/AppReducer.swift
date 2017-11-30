@@ -15,29 +15,18 @@ import CoreLocation
 
 struct AppReducer {
 
-    let userLocationService: UserLocationService
-    let provider: MoyaProvider<PlacesApi>
+    let nearbyPlacesService: NearbyPlacesService
     let disposeBag = DisposeBag()
     weak var store: Store<FetchedPlacesState>?
 
-    init(userLocationService: UserLocationService,
-         provider: MoyaProvider<PlacesApi>) {
-        self.userLocationService = userLocationService
-        self.provider = provider
+    init(_ nearbyPlacesService: NearbyPlacesService) {
+        self.nearbyPlacesService = nearbyPlacesService
     }
 
     func reduce(action: Action, state: FetchedPlacesState?) -> FetchedPlacesState {
         switch action {
         case _ as FetchPlacesAction:
-            _ = userLocationService.getUserLocation()
-                .flatMap({ (userLocation: CLLocation) -> Single<LocationPlaces> in
-                    print("")
-                    print("user location")
-                    print(userLocation)
-                    return self.provider.rx.request(.recommended(latitude: userLocation.coordinate.latitude,
-                                                                 longitude: userLocation.coordinate.longitude))
-                    .map(to: LocationPlaces.self, keyPath: "response")
-                })
+            _ = nearbyPlacesService.fetchNearbyPlaces()
                 .subscribe({ (event) in
                     switch event {
                     case .next(let places):

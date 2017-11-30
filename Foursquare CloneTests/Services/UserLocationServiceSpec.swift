@@ -13,10 +13,10 @@ import CoreLocation
 
 class UserLocationServiceSpec: XCTestCase {
 
-    var container: Container!
-    var locationManager: LocationManagerMock!
-    var userLocationService: UserLocationService!
-    let disposeBag = DisposeBag()
+    private var container: Container!
+    private var locationManager: LocationManagerMock!
+    private var userLocationService: UserLocationService!
+    private let disposeBag = DisposeBag()
 
     override func setUp() {
         super.setUp()

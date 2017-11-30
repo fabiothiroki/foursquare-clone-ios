@@ -17,7 +17,11 @@ protocol LocationManager {
 
 extension CLLocationManager: LocationManager {}
 
-class UserLocationService: NSObject {
+protocol UserLocationDatasource {
+    func getUserLocation() -> Observable<CLLocation>
+}
+
+class UserLocationService: NSObject, UserLocationDatasource {
 
     fileprivate var locationManager: LocationManager
     fileprivate let subject = PublishSubject<CLLocation>()

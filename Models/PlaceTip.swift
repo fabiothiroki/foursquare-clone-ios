@@ -11,7 +11,7 @@ import Mapper
 
 struct PlaceTip: Mappable {
     let text: String
-    
+
     init(map: Mapper) throws {
         try text = map.from("text")
     }
