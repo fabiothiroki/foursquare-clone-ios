@@ -15,6 +15,23 @@ enum Result<T> {
     case finished(T)
 }
 
+extension Result: Equatable {
+    static func == (lhs: Result<T>, rhs: Result<T>) -> Bool {
+        switch (lhs, rhs) {
+        case (Result<T>.loading, Result<T>.loading):
+            return true
+        default:
+            return false
+        }
+    }
+}
+
 struct FetchedPlacesState: StateType {
     var places: Result<LocationPlaces> = .loading
+}
+
+extension FetchedPlacesState: Equatable {
+    static func == (lhs: FetchedPlacesState, rhs: FetchedPlacesState) -> Bool {
+        return lhs.places == rhs.places
+    }
 }

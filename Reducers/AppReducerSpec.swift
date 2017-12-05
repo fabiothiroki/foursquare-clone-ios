@@ -17,7 +17,7 @@ class AppReducerSpec: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        
+
         container = Container()
         container.register(UserLocationDatasource.self) { _ in UserLocationServiceMock() }
             .inObjectScope(.container)
@@ -43,5 +43,10 @@ class AppReducerSpec: XCTestCase {
 
     func testShouldResolveDependencies() {
         XCTAssertNotNil(reducer)
+    }
+
+    func testShouldReturnInitialState() {
+        let state = reducer.reduce(action: FetchPlacesAction(), state: nil)
+        XCTAssertEqual(state, FetchedPlacesState(places: .loading))
     }
 }
