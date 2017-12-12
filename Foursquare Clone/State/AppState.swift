@@ -22,6 +22,8 @@ extension Result: Equatable {
             return true
         case let (.finished(a), .finished(b)):
             return a == b
+        case (.failed, .failed):
+            return true
         default:
             return false
         }

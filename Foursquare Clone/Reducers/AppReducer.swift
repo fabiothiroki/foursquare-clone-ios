@@ -44,6 +44,8 @@ struct AppReducer {
                 }).disposed(by: disposeBag)
         case let action as SetPlacesAction:
             return FetchedPlacesState(places: Result.finished(action.places))
+        case _ as SetErrorAction:
+            return FetchedPlacesState(places: Result.failed)
         default:
             break
         }
