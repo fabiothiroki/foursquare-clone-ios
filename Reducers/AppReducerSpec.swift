@@ -18,6 +18,27 @@ class AppReducerSpec: XCTestCase {
     override func setUp() {
         super.setUp()
 
+        setupDependencies()
+    }
+
+    func testShouldResolveDependencies() {
+        XCTAssertNotNil(reducer)
+    }
+
+    func testShouldReturnInitialState() {
+        let newState = reducer.reduce(action: FetchPlacesAction(), state: nil)
+        XCTAssertEqual(newState, FetchedPlacesState(places: .loading))
+    }
+
+    func testShouldChangeStateAfterSucessfulRequest() {
+        let places = LocationPlaces()
+        let action = SetPlacesAction.init(places: places)
+
+        let newState = reducer.reduce(action: action, state: nil)
+        XCTAssertEqual(newState, FetchedPlacesState(places: Result.finished(places)))
+    }
+
+    private func setupDependencies() {
         container = Container()
         container.register(UserLocationDatasource.self) { _ in UserLocationServiceMock() }
             .inObjectScope(.container)
@@ -39,14 +60,5 @@ class AppReducerSpec: XCTestCase {
             }.inObjectScope(.container)
 
         reducer = container.resolve(AppReducer.self)
-    }
-
-    func testShouldResolveDependencies() {
-        XCTAssertNotNil(reducer)
-    }
-
-    func testShouldReturnInitialState() {
-        let state = reducer.reduce(action: FetchPlacesAction(), state: nil)
-        XCTAssertEqual(state, FetchedPlacesState(places: .loading))
     }
 }

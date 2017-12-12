@@ -9,17 +9,19 @@
 import Foundation
 import ReSwift
 
-enum Result<T> {
+enum Result {
     case loading
     case failed
-    case finished(T)
+    case finished(LocationPlaces)
 }
 
 extension Result: Equatable {
-    static func == (lhs: Result<T>, rhs: Result<T>) -> Bool {
+    static func == (lhs: Result, rhs: Result) -> Bool {
         switch (lhs, rhs) {
-        case (Result<T>.loading, Result<T>.loading):
+        case (.loading, .loading):
             return true
+        case let (.finished(a), .finished(b)):
+            return a == b
         default:
             return false
         }
@@ -27,7 +29,7 @@ extension Result: Equatable {
 }
 
 struct FetchedPlacesState: StateType {
-    var places: Result<LocationPlaces> = .loading
+    var places: Result = .loading
 }
 
 extension FetchedPlacesState: Equatable {
