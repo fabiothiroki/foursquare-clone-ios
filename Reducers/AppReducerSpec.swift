@@ -38,6 +38,14 @@ class AppReducerSpec: XCTestCase {
         XCTAssertEqual(newState, FetchedPlacesState(places: Result.finished(places)))
     }
 
+    func testShouldChangeStateAfterErrorRequest() {
+        let mockError = NSError(domain: "Mock error", code: 42, userInfo: nil )
+        let action = SetErrorAction(error: mockError)
+
+        let newState = reducer.reduce(action: action, state: nil)
+        XCTAssertEqual(newState, FetchedPlacesState(places: Result.failed))
+    }
+
     private func setupDependencies() {
         container = Container()
         container.register(UserLocationDatasource.self) { _ in UserLocationServiceMock() }
