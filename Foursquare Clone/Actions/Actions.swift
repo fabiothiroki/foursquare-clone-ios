@@ -10,8 +10,12 @@ import ReSwift
 
 struct FetchPlacesAction: Action {}
 
-struct SetPlacesAction: Action {
+struct SetPlacesAction: Action, Equatable {
     let places: LocationPlaces
+
+    static func == (lhs: SetPlacesAction, rhs: SetPlacesAction) -> Bool {
+        return lhs.places == rhs.places
+    }
 }
 
 struct SetErrorAction: Action {

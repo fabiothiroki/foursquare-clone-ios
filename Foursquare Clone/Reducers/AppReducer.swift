@@ -13,11 +13,17 @@ import Moya
 import Moya_ModelMapper
 import CoreLocation
 
+protocol AppStore {
+    func dispatch(_ action: Action)
+}
+
+extension Store: AppStore {}
+
 struct AppReducer {
 
     let nearbyPlacesService: NearbyPlacesService
     let disposeBag = DisposeBag()
-    weak var store: Store<FetchedPlacesState>?
+    var store: AppStore?
 
     init(_ nearbyPlacesService: NearbyPlacesService) {
         self.nearbyPlacesService = nearbyPlacesService

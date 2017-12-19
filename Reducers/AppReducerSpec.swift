@@ -14,6 +14,7 @@ class AppReducerSpec: XCTestCase {
 
     private var container: Container!
     private var reducer: AppReducer!
+    private var store: StoreMock!
 
     override func setUp() {
         super.setUp()
@@ -23,6 +24,8 @@ class AppReducerSpec: XCTestCase {
 
     func testShouldResolveDependencies() {
         XCTAssertNotNil(reducer)
+        XCTAssertNotNil(store)
+        XCTAssertNotNil(reducer.store)
     }
 
     func testShouldReturnInitialState() {
@@ -30,7 +33,7 @@ class AppReducerSpec: XCTestCase {
         XCTAssertEqual(newState, FetchedPlacesState(places: .loading))
     }
 
-    func testShouldChangeStateAfterSucessfulRequest() {
+    func testShouldChangeStateAfterSuccessfulRequest() {
         let places = LocationPlaces()
         let action = SetPlacesAction.init(places: places)
 
@@ -46,6 +49,17 @@ class AppReducerSpec: XCTestCase {
         XCTAssertEqual(newState, FetchedPlacesState(places: Result.failed))
     }
 
+    func testShouldDispatchCorrectActionAfterSuccessfulRequest() {
+        _ = reducer.reduce(action: FetchPlacesAction(), state: nil)
+
+        if let dispatchedAction = store.dispatchedAction as? SetPlacesAction {
+            let places = LocationPlaces()
+            XCTAssertEqual(dispatchedAction, SetPlacesAction.init(places: places))
+        } else {
+            XCTFail("Dispatched action should be of type SetPlacesAction")
+        }
+    }
+
     private func setupDependencies() {
         container = Container()
         container.register(UserLocationDatasource.self) { _ in UserLocationServiceMock() }
@@ -56,17 +70,17 @@ class AppReducerSpec: XCTestCase {
             NearbyPlacesService.init(userLocationDatasource: resolver.resolve(UserLocationDatasource.self)!,
                                      placesDatasource: resolver.resolve(PlacesDatasource.self)!)}
 
+        container.register(AppStore.self) { _ in StoreMock() }.inObjectScope(.container)
+
         container.register(AppReducer.self) { resolver in
             AppReducer.init(resolver.resolve(NearbyPlacesService.self)!)
             }.initCompleted { (resolver, appReducer) in
                 var reducer = appReducer
-                reducer.store = resolver.resolve(Store<FetchedPlacesState>.self)
+                reducer.store = resolver.resolve(AppStore.self)
         }
 
-        container.register(Store<FetchedPlacesState>.self) { resolver in
-            Store<FetchedPlacesState>(reducer: (resolver.resolve(AppReducer.self)!).reduce, state: nil)
-            }.inObjectScope(.container)
-
         reducer = container.resolve(AppReducer.self)
+        store = container.resolve(AppStore.self) as? StoreMock
+        reducer.store = store
     }
 }
