@@ -61,17 +61,18 @@ struct Injector {
     }
 
     private func setupReducer() {
+
         container.register(AppReducer.self) { resolver in
             AppReducer.init(resolver.resolve(NearbyPlacesService.self)!)
-            }.initCompleted { (resolver, appReducer) in
-                var reducer = appReducer
-                reducer.store = resolver.resolve(Store<FetchedPlacesState>.self)
+        }.initCompleted { (resolver, appReducer) in
+            appReducer.store = resolver.resolve(AppStore.self)
         }
     }
 
     private func setupState() {
-        container.register(Store<FetchedPlacesState>.self) { resolver in
+        container.register(AppStore.self) { resolver in
             Store<FetchedPlacesState>(reducer: (resolver.resolve(AppReducer.self)!).reduce, state: nil)
-            }.inObjectScope(.container)
+            }
+            .inObjectScope(.container)
     }
 }

@@ -40,10 +40,11 @@ class InjectorSpec: XCTestCase {
     func testShouldResolveReducer() {
         let reducer = injector.resolve(AppReducer.self)
         XCTAssertNotNil(reducer)
+        XCTAssertNotNil(reducer?.store)
     }
 
     func testShouldResolveState() {
-        let store = injector.resolve(Store<FetchedPlacesState>.self)
+        let store = injector.resolve(AppStore.self)
         XCTAssertNotNil(store)
     }
 }

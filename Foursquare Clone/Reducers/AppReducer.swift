@@ -19,10 +19,10 @@ protocol AppStore {
 
 extension Store: AppStore {}
 
-struct AppReducer {
+class AppReducer {
 
-    let nearbyPlacesService: NearbyPlacesService
-    let disposeBag = DisposeBag()
+    fileprivate let nearbyPlacesService: NearbyPlacesService
+    fileprivate let disposeBag = DisposeBag()
     var store: AppStore?
 
     init(_ nearbyPlacesService: NearbyPlacesService) {
