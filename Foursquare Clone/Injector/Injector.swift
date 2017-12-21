@@ -22,16 +22,16 @@ struct Injector {
         setup()
     }
 
-    func setup() {
+    func resolve<Service>(_ serviceType: Service.Type) -> Service? {
+        return container.resolve(serviceType)
+    }
+
+    private func setup() {
         setupControllers()
         setupLocationDependencies()
         setupProvider()
         setupNearbyPlacesService()
         setupReducer()
-    }
-
-    func resolve<Service>(_ serviceType: Service.Type) -> Service? {
-        return container.resolve(serviceType)
     }
 
     private func setupControllers() {

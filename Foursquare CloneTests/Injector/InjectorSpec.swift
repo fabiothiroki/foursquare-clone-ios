@@ -17,7 +17,6 @@ class InjectorSpec: XCTestCase {
     override func setUp() {
         super.setUp()
         injector = Injector()
-        injector.setup()
     }
 
     func testShouldResolveViewController() {
