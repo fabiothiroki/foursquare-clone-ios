@@ -18,13 +18,16 @@ struct Injector {
 
     private let container: Container = Container()
 
+    init() {
+        setup()
+    }
+
     func setup() {
         setupControllers()
         setupLocationDependencies()
         setupProvider()
         setupNearbyPlacesService()
         setupReducer()
-        setupState()
     }
 
     func resolve<Service>(_ serviceType: Service.Type) -> Service? {
@@ -64,15 +67,6 @@ struct Injector {
 
         container.register(AppReducer.self) { resolver in
             AppReducer.init(resolver.resolve(NearbyPlacesService.self)!)
-        }.initCompleted { (resolver, appReducer) in
-            appReducer.store = resolver.resolve(AppStore.self)
         }
-    }
-
-    private func setupState() {
-        container.register(AppStore.self) { resolver in
-            Store<FetchedPlacesState>(reducer: (resolver.resolve(AppReducer.self)!).reduce, state: nil)
-            }
-            .inObjectScope(.container)
     }
 }

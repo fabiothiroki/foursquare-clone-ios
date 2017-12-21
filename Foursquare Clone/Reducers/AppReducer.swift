@@ -13,17 +13,10 @@ import Moya
 import Moya_ModelMapper
 import CoreLocation
 
-protocol AppStore {
-    func dispatch(_ action: Action)
-}
-
-extension Store: AppStore {}
-
-class AppReducer {
+struct AppReducer {
 
     fileprivate let nearbyPlacesService: NearbyPlacesService
     fileprivate let disposeBag = DisposeBag()
-    var store: AppStore?
 
     init(_ nearbyPlacesService: NearbyPlacesService) {
         self.nearbyPlacesService = nearbyPlacesService
@@ -39,11 +32,11 @@ class AppReducer {
                         print("")
                         print("places")
                         print(places)
-                        self.store?.dispatch(SetPlacesAction(places: places))
+                        store.dispatch(SetPlacesAction(places: places))
                     case .error(let error):
                         print("")
                         print(error)
-                        self.store?.dispatch(SetErrorAction(error: error))
+                        store.dispatch(SetErrorAction(error: error))
                     case .completed:
                         break
                     }
