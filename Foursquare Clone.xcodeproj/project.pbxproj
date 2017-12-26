@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4645BFFD65E5E574348C6C7F /* Pods_Foursquare_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */; };
+		BE0B37671FEB393700032EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
 		BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
 		BE2E0F801FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
 		BE2E0F821FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
@@ -52,6 +53,7 @@
 		BEF8C8EB1FBD03EC00A756C5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */; };
 		BEF8C8EC1FBD03EC00A756C5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */; };
 		E56D95231FCF5FEF00FFA4BA /* UserLocationServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D95221FCF5FEF00FFA4BA /* UserLocationServiceMock.swift */; };
+		E5B65C331FD73B9D00D3226A /* AppReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B65C321FD73B9D00D3226A /* AppReducerSpec.swift */; };
 		F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,7 @@
 		BEF8C8E61FBCF3D700A756C5 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		E56D95221FCF5FEF00FFA4BA /* UserLocationServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceMock.swift; sourceTree = "<group>"; };
+		E5B65C321FD73B9D00D3226A /* AppReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducerSpec.swift; sourceTree = "<group>"; };
 		E89B84E07B99D63BA61C5E57 /* Pods-Foursquare CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B53916F13256DA67DF44D /* Pods-Foursquare CloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,8 +205,9 @@
 		BE9C83FB1F8AE1D300A5401F /* Foursquare CloneTests */ = {
 			isa = PBXGroup;
 			children = (
-				E56D95211FCF5FCE00FFA4BA /* Mocks */,
 				BE3B6B6A1FC7B7D400ECE416 /* Injector */,
+				E56D95211FCF5FCE00FFA4BA /* Mocks */,
+				E5B65C311FD73B5100D3226A /* Reducers */,
 				BECD033D1F8DCF7E00470DAF /* Services */,
 				BE9C83FE1F8AE1D300A5401F /* Info.plist */,
 			);
@@ -293,6 +297,14 @@
 			);
 			path = Mocks;
 			sourceTree = "<group>";
+		};
+		E5B65C311FD73B5100D3226A /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				E5B65C321FD73B9D00D3226A /* AppReducerSpec.swift */,
+			);
+			path = Reducers;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -582,6 +594,7 @@
 				BEF8C8E81FBCF3D700A756C5 /* AppReducer.swift in Sources */,
 				BE3C738D1FCE3FB000F37C7F /* NearbyPlacesService.swift in Sources */,
 				BECD033B1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
+				BE0B37671FEB393700032EDB /* AppDelegate.swift in Sources */,
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
 				BEF7B53C1FA02A70007157AB /* PlacesApi.swift in Sources */,
 				BEC1FE011FC7A6A20062B64F /* Injector.swift in Sources */,
@@ -595,6 +608,7 @@
 				BEBF8F181FB3E4560001EB4F /* PhotoGroup.swift in Sources */,
 				BE3B6B6E1FC7B8A800ECE416 /* InjectorSpec.swift in Sources */,
 				BEF8C8E41FBCE25500A756C5 /* AppState.swift in Sources */,
+				E5B65C331FD73B9D00D3226A /* AppReducerSpec.swift in Sources */,
 				BECD03411F8DD03B00470DAF /* UserLocationServiceSpec.swift in Sources */,
 				BEBF8F151FB2A1630001EB4F /* Category.swift in Sources */,
 			);

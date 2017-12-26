@@ -15,9 +15,8 @@ import CoreLocation
 
 struct AppReducer {
 
-    let nearbyPlacesService: NearbyPlacesService
-    let disposeBag = DisposeBag()
-    weak var store: Store<FetchedPlacesState>?
+    fileprivate let nearbyPlacesService: NearbyPlacesService
+    fileprivate let disposeBag = DisposeBag()
 
     init(_ nearbyPlacesService: NearbyPlacesService) {
         self.nearbyPlacesService = nearbyPlacesService
@@ -33,17 +32,19 @@ struct AppReducer {
                         print("")
                         print("places")
                         print(places)
-                        self.store?.dispatch(SetPlacesAction(places: places))
+                        store.dispatch(SetPlacesAction(places: places))
                     case .error(let error):
                         print("")
                         print(error)
-                        self.store?.dispatch(SetErrorAction(error: error))
+                        store.dispatch(SetErrorAction(error: error))
                     case .completed:
                         break
                     }
                 }).disposed(by: disposeBag)
         case let action as SetPlacesAction:
             return FetchedPlacesState(places: Result.finished(action.places))
+        case _ as SetErrorAction:
+            return FetchedPlacesState(places: Result.failed)
         default:
             break
         }

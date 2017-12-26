@@ -25,3 +25,9 @@ struct LocationPlaces: Mappable {
         headerFullLocation = ""
     }
 }
+
+extension LocationPlaces: Equatable {
+    static func == (lhs: LocationPlaces, rhs: LocationPlaces) -> Bool {
+        return lhs.places == rhs.places && lhs.headerFullLocation == rhs.headerFullLocation
+    }
+}

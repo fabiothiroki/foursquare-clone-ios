@@ -25,7 +25,16 @@ struct Place: Mappable {
         let photoGroup: [PhotoGroup] = try map.from("venue.photos.groups")
         imageUrl = photoGroup.first?.items.first?.imageUrl ?? ""
 
-        let placeTip: [PlaceTip]? = try map.optionalFrom("tips")
+        let placeTip: [PlaceTip]? = map.optionalFrom("tips")
         description = placeTip?.first?.text ?? ""
+    }
+}
+
+extension Place: Equatable {
+    static func == (lhs: Place, rhs: Place) -> Bool {
+        return lhs.name == rhs.name
+        && lhs.category == rhs.category
+        && lhs.imageUrl == rhs.imageUrl
+        && lhs.description == rhs.description
     }
 }

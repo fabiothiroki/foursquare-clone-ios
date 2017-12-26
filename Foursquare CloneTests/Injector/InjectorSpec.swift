@@ -17,7 +17,6 @@ class InjectorSpec: XCTestCase {
     override func setUp() {
         super.setUp()
         injector = Injector()
-        injector.setup()
     }
 
     func testShouldResolveViewController() {
@@ -40,10 +39,5 @@ class InjectorSpec: XCTestCase {
     func testShouldResolveReducer() {
         let reducer = injector.resolve(AppReducer.self)
         XCTAssertNotNil(reducer)
-    }
-
-    func testShouldResolveState() {
-        let store = injector.resolve(Store<FetchedPlacesState>.self)
-        XCTAssertNotNil(store)
     }
 }
