@@ -12,7 +12,6 @@ import Swinject
 import CoreLocation
 import Moya
 import Moya_ModelMapper
-import ReSwift
 
 struct Injector {
 

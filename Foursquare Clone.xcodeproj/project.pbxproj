@@ -28,6 +28,7 @@
 		BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */; };
 		BEB25AEE2006EC4D00646979 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB25AED2006EC4D00646979 /* venues.json */; };
 		BEB25AEF2006EC4D00646979 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB25AED2006EC4D00646979 /* venues.json */; };
+		BEB25AF12006F16800646979 /* PlacesServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB25AF02006F16800646979 /* PlacesServiceSpec.swift */; };
 		BEBF8F141FB2A1630001EB4F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F131FB2A1630001EB4F /* Category.swift */; };
 		BEBF8F151FB2A1630001EB4F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F131FB2A1630001EB4F /* Category.swift */; };
 		BEBF8F171FB3E4560001EB4F /* PhotoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */; };
@@ -92,6 +93,7 @@
 		BE9C83F81F8AE1D300A5401F /* Foursquare CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Foursquare CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83FE1F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB25AED2006EC4D00646979 /* venues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = venues.json; sourceTree = "<group>"; };
+		BEB25AF02006F16800646979 /* PlacesServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesServiceSpec.swift; sourceTree = "<group>"; };
 		BEBF8F131FB2A1630001EB4F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGroup.swift; sourceTree = "<group>"; };
 		BEBF8F191FB3E46A0001EB4F /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				BECD03401F8DD03B00470DAF /* UserLocationServiceSpec.swift */,
 				BE3C738E1FCE476A00F37C7F /* NearbyPlacesServiceSpec.swift */,
+				BEB25AF02006F16800646979 /* PlacesServiceSpec.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			files = (
 				BEF8C8EC1FBD03EC00A756C5 /* Actions.swift in Sources */,
 				BE3C73911FCE480400F37C7F /* PlacesApiMock.swift in Sources */,
+				BEB25AF12006F16800646979 /* PlacesServiceSpec.swift in Sources */,
 				BE3C738F1FCE476A00F37C7F /* NearbyPlacesServiceSpec.swift in Sources */,
 				BE2E0F831FA8192D002A5494 /* Group.swift in Sources */,
 				BEBF8F1B1FB3E46A0001EB4F /* PhotoItem.swift in Sources */,
