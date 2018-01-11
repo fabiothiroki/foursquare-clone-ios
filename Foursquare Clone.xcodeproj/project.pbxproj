@@ -26,6 +26,8 @@
 		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
 		BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */; };
 		BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */; };
+		BEB25AEE2006EC4D00646979 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB25AED2006EC4D00646979 /* venues.json */; };
+		BEB25AEF2006EC4D00646979 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB25AED2006EC4D00646979 /* venues.json */; };
 		BEBF8F141FB2A1630001EB4F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F131FB2A1630001EB4F /* Category.swift */; };
 		BEBF8F151FB2A1630001EB4F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F131FB2A1630001EB4F /* Category.swift */; };
 		BEBF8F171FB3E4560001EB4F /* PhotoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */; };
@@ -89,6 +91,7 @@
 		BE9C83F31F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9C83F81F8AE1D300A5401F /* Foursquare CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Foursquare CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83FE1F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB25AED2006EC4D00646979 /* venues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = venues.json; sourceTree = "<group>"; };
 		BEBF8F131FB2A1630001EB4F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BEBF8F161FB3E4560001EB4F /* PhotoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGroup.swift; sourceTree = "<group>"; };
 		BEBF8F191FB3E46A0001EB4F /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 				BEF8C8E51FBCF3BC00A756C5 /* Reducers */,
 				BECD03371F8DCE3D00470DAF /* Services */,
 				BEF8C8E11FBCE23700A756C5 /* State */,
+				BEB25AEC2006EC3000646979 /* Stubbed Responses */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
 				BE9C83E91F8AE1D200A5401F /* ViewController.swift */,
 				BE9C83EB1F8AE1D200A5401F /* Main.storyboard */,
@@ -212,6 +216,14 @@
 				BE9C83FE1F8AE1D300A5401F /* Info.plist */,
 			);
 			path = "Foursquare CloneTests";
+			sourceTree = "<group>";
+		};
+		BEB25AEC2006EC3000646979 /* Stubbed Responses */ = {
+			isa = PBXGroup;
+			children = (
+				BEB25AED2006EC4D00646979 /* venues.json */,
+			);
+			path = "Stubbed Responses";
 			sourceTree = "<group>";
 		};
 		BEBF8F221FB735EC0001EB4F /* Networking */ = {
@@ -397,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */,
+				BEB25AEE2006EC4D00646979 /* venues.json in Resources */,
 				BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */,
 				BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */,
 			);
@@ -406,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB25AEF2006EC4D00646979 /* venues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
