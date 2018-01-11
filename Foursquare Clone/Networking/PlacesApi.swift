@@ -33,7 +33,10 @@ extension PlacesApi: TargetType {
     }
 
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .recommended:
+            return stubbedResponse("venues")
+        }
     }
 
     var task: Task {
@@ -58,5 +61,10 @@ extension PlacesApi: TargetType {
             "ll": String(format: "%f,%f", latitude, longitude),
             "client_id": ServicesContants.foursquareClientId,
             "client_secret": ServicesContants.foursquareClientSecret]
+    }
+
+    private func stubbedResponse(_ filename: String) -> Data! {
+        let url = Bundle.main.url(forResource: filename, withExtension: "json")
+        return (try? Data(contentsOf: url!))
     }
 }
