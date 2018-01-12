@@ -34,4 +34,23 @@ class PlacesServiceSpec: XCTestCase {
                 XCTAssertTrue(completed)
             })
     }
+
+    func testShouldEmitTheCorrectError() {
+        let provider = MoyaProvider<PlacesApi>(
+            endpointClosure: failureEndpointClosure,
+            stubClosure: MoyaProvider.immediatelyStub)
+        placesService = PlacesService.init(provider: provider)
+
+        _ = placesService.placesAround(latitude: -23.5666151, longitude: -46.6463977)
+            .subscribe { event in
+                switch event {
+                case .next:
+                    XCTFail("Should have errored")
+                case .error(let error):
+                    XCTAssertEqual(error.localizedDescription, "Houston, we have a problem")
+                default:
+                    break
+            }
+        }
+    }
 }
