@@ -26,9 +26,6 @@ struct NearbyPlacesService {
     func fetchNearbyPlaces() -> Observable<LocationPlaces> {
         return userLocationDatasource.getUserLocation()
             .flatMap({ (userLocation: CLLocation) -> Observable<LocationPlaces> in
-                print("")
-                print("user location")
-                print(userLocation)
                 return self.placesDatasource.placesAround(latitude: userLocation.coordinate.latitude,
                                                        longitude: userLocation.coordinate.longitude)
             })
