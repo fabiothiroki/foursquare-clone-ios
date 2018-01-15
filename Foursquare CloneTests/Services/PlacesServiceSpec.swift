@@ -24,14 +24,56 @@ class PlacesServiceSpec: XCTestCase {
         let provider = MoyaProvider<PlacesApi>(stubClosure: MoyaProvider.immediatelyStub)
         placesService = PlacesService.init(provider: provider)
 
-        var completed = false
+        var succeeded = false
 
         _ = placesService.placesAround(latitude: -23.5666151, longitude: -46.6463977)
-            .subscribe(onError: { (_) in
-                 XCTFail("Should not return error")
-            }, onCompleted: {
-                completed = true
-                XCTAssertTrue(completed)
-            })
+            .subscribe { event in
+                switch event {
+                case .next:
+                    succeeded = true
+                case .error:
+                    XCTFail("Should not return error")
+                case .completed:
+                    XCTAssertTrue(succeeded)
+                }
+        }
+    }
+
+    func testMapResponseToModel() {
+        let provider = MoyaProvider<PlacesApi>(stubClosure: MoyaProvider.immediatelyStub)
+        placesService = PlacesService.init(provider: provider)
+
+        var responseData: LocationPlaces?
+
+        _ = placesService.placesAround(latitude: -23.5666151, longitude: -46.6463977)
+            .subscribe { event in
+                switch event {
+                case .next(let response):
+                    responseData = response
+                case .error:
+                    XCTFail("Should not return error")
+                case .completed:
+                    XCTAssertNotNil(responseData)
+                }
+        }
+    }
+
+    func testShouldEmitTheCorrectError() {
+        let provider = MoyaProvider<PlacesApi>(
+            endpointClosure: failureEndpointClosure,
+            stubClosure: MoyaProvider.immediatelyStub)
+        placesService = PlacesService.init(provider: provider)
+
+        _ = placesService.placesAround(latitude: -23.5666151, longitude: -46.6463977)
+            .subscribe { event in
+                switch event {
+                case .next:
+                    XCTFail("Should have errored")
+                case .error(let error):
+                    XCTAssertEqual(error.localizedDescription, "Houston, we have a problem")
+                case .completed:
+                    XCTFail("Should have errored")
+            }
+        }
     }
 }

@@ -68,3 +68,21 @@ extension PlacesApi: TargetType {
         return (try? Data(contentsOf: url!))
     }
 }
+
+func url(_ route: TargetType) -> String {
+    return route.baseURL.appendingPathComponent(route.path).absoluteString
+}
+
+let failureEndpointClosure = { (target: PlacesApi) -> Endpoint<PlacesApi> in
+    let error = NSError(
+        domain: "com.moya.moyaerror",
+        code: 0,
+        userInfo: [NSLocalizedDescriptionKey: "Houston, we have a problem"])
+
+    return Endpoint<PlacesApi>(
+        url: url(target),
+        sampleResponseClosure: {.networkError(error)},
+        method: target.method,
+        task: target.task,
+        httpHeaderFields: target.headers)
+}
