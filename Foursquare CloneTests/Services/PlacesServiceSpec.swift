@@ -7,37 +7,12 @@
 //
 
 import XCTest
-import Swinject
 import Moya
 import Moya_ModelMapper
 
 class PlacesServiceSpec: XCTestCase {
 
-    private var container: Container!
     private var placesService: PlacesService!
-
-    override func setUp() {
-        super.setUp()
-    }
-
-    func testShouldCompleteWithExpectedResponse() {
-        let provider = MoyaProvider<PlacesApi>(stubClosure: MoyaProvider.immediatelyStub)
-        placesService = PlacesService.init(provider: provider)
-
-        var succeeded = false
-
-        _ = placesService.placesAround(latitude: -23.5666151, longitude: -46.6463977)
-            .subscribe { event in
-                switch event {
-                case .next:
-                    succeeded = true
-                case .error:
-                    XCTFail("Should not return error")
-                case .completed:
-                    XCTAssertTrue(succeeded)
-                }
-        }
-    }
 
     func testMapResponseToModel() {
         let provider = MoyaProvider<PlacesApi>(stubClosure: MoyaProvider.immediatelyStub)
