@@ -29,13 +29,8 @@ struct AppReducer {
                 .subscribe({ (event) in
                     switch event {
                     case .next(let places):
-                        print("")
-                        print("places")
-                        print(places)
                         store.dispatch(SetPlacesAction(places: places))
                     case .error(let error):
-                        print("")
-                        print(error)
                         store.dispatch(SetErrorAction(error: error))
                     case .completed:
                         break
