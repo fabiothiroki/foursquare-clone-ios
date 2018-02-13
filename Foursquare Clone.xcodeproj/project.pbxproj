@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4645BFFD65E5E574348C6C7F /* Pods_Foursquare_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */; };
 		BE0B37671FEB393700032EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
+		BE20BF0E20337EE600AB6BF1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE20BF0D20337EE600AB6BF1 /* ViewController.xib */; };
+		BE20BF0F20337EE600AB6BF1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE20BF0D20337EE600AB6BF1 /* ViewController.xib */; };
+		BE20BF132033892D00AB6BF1 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20BF112033892D00AB6BF1 /* PlacesViewController.swift */; };
+		BE20BF142033892D00AB6BF1 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20BF112033892D00AB6BF1 /* PlacesViewController.swift */; };
+		BE20BF152033892D00AB6BF1 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE20BF122033892D00AB6BF1 /* PlacesViewController.xib */; };
+		BE20BF162033892D00AB6BF1 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE20BF122033892D00AB6BF1 /* PlacesViewController.xib */; };
 		BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
 		BE2E0F801FA80204002A5494 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F7E1FA80204002A5494 /* Place.swift */; };
 		BE2E0F821FA8192D002A5494 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E0F811FA8192D002A5494 /* Group.swift */; };
@@ -76,6 +82,9 @@
 		359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_CloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA2435F526F3E0B15602C48 /* Pods-Foursquare CloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneUITests/Pods-Foursquare CloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		987B857AEA84AF395D53BA4A /* Pods_Foursquare_CloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_CloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE20BF0D20337EE600AB6BF1 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BE20BF112033892D00AB6BF1 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		BE20BF122033892D00AB6BF1 /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
 		BE2E0F7E1FA80204002A5494 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		BE2E0F811FA8192D002A5494 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		BE3B6B6D1FC7B8A800ECE416 /* InjectorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorSpec.swift; sourceTree = "<group>"; };
@@ -159,6 +168,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE20BF102033891C00AB6BF1 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE20BF112033892D00AB6BF1 /* PlacesViewController.swift */,
+				BE20BF122033892D00AB6BF1 /* PlacesViewController.xib */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
 		BE3B6B6A1FC7B7D400ECE416 /* Injector */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +216,10 @@
 				BECD03371F8DCE3D00470DAF /* Services */,
 				BEF8C8E11FBCE23700A756C5 /* State */,
 				BEB25AEC2006EC3000646979 /* Stubbed Responses */,
+				BE20BF102033891C00AB6BF1 /* View Controller */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
 				BE9C83E91F8AE1D200A5401F /* ViewController.swift */,
+				BE20BF0D20337EE600AB6BF1 /* ViewController.xib */,
 				BE9C83EB1F8AE1D200A5401F /* Main.storyboard */,
 				BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */,
 				BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */,
@@ -411,6 +431,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE20BF152033892D00AB6BF1 /* PlacesViewController.xib in Resources */,
+				BE20BF0E20337EE600AB6BF1 /* ViewController.xib in Resources */,
 				BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */,
 				BEB25AEE2006EC4D00646979 /* venues.json in Resources */,
 				BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */,
@@ -422,6 +444,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE20BF162033892D00AB6BF1 /* PlacesViewController.xib in Resources */,
+				BE20BF0F20337EE600AB6BF1 /* ViewController.xib in Resources */,
 				BEB25AEF2006EC4D00646979 /* venues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +470,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -460,7 +483,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -592,6 +614,7 @@
 				BEF8C8E71FBCF3D700A756C5 /* AppReducer.swift in Sources */,
 				BEF8C8E31FBCE25500A756C5 /* AppState.swift in Sources */,
 				BEF7B53B1FA02A70007157AB /* PlacesApi.swift in Sources */,
+				BE20BF132033892D00AB6BF1 /* PlacesViewController.swift in Sources */,
 				BE2E0F7F1FA80204002A5494 /* Place.swift in Sources */,
 				BE3C73931FCE5A3A00F37C7F /* PlacesService.swift in Sources */,
 				BEBF8F171FB3E4560001EB4F /* PhotoGroup.swift in Sources */,
@@ -621,6 +644,7 @@
 				BE3B6B691FC7B1BB00ECE416 /* ViewController.swift in Sources */,
 				BE2E0F801FA80204002A5494 /* Place.swift in Sources */,
 				BEBF8F211FB400600001EB4F /* PlaceTip.swift in Sources */,
+				BE20BF142033892D00AB6BF1 /* PlacesViewController.swift in Sources */,
 				BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */,
 				E56D95231FCF5FEF00FFA4BA /* UserLocationServiceMock.swift in Sources */,
 				BEBF8F181FB3E4560001EB4F /* PhotoGroup.swift in Sources */,

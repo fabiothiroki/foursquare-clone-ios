@@ -35,8 +35,7 @@ struct Injector {
 
     private func setupControllers() {
         container.register(ViewController.self) { resolver in
-            let controller = ViewController()
-            controller.store = resolver.resolve(Store<FetchedPlacesState>.self)
+            let controller = ViewController(nibName: "ViewController", bundle: nil)
             return controller
         }
     }

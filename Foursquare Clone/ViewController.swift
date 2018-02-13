@@ -17,17 +17,18 @@ class ViewController: UIViewController, StoreSubscriber {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        store?.subscribe(self)
+//        store?.subscribe(self)
+        print("asdadasdadasda")
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        store?.unsubscribe(self)
+//        store?.unsubscribe(self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        store?.dispatch(FetchPlacesAction())
+//        store?.dispatch(FetchPlacesAction())
     }
 
     func newState(state: FetchedPlacesState) {
