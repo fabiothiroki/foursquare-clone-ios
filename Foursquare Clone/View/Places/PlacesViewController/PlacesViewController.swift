@@ -12,6 +12,9 @@ import ReSwift
 class PlacesViewController: UIViewController {
 
     @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    var places: [Place] = []
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,6 +29,9 @@ class PlacesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         store.dispatch(FetchPlacesAction())
+
+        collectionView.register(UINib(nibName: "PlaceCollectionViewCell", bundle: nil),
+                                forCellWithReuseIdentifier: "item")
     }
 }
 
@@ -41,11 +47,26 @@ extension PlacesViewController: StoreSubscriber {
         case .finished(let places):
             locationName.text = "near \(places.headerFullLocation)"
             locationName.isHidden = false
+            self.places = places.places
+            collectionView.reloadData()
         default:
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
 
         print(state)
     }
+}
 
+extension PlacesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return places.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "item",
+                                                       for: indexPath) as? PlaceCollectionViewCell)!
+        cell.place = places[indexPath.item]
+        return cell
+    }
 }
