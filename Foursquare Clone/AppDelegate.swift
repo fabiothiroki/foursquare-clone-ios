@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-//        let rootViewController = injector.resolve(ViewController.self)
-        let rootViewController = PlacesViewController(nibName: "PlacesViewController", bundle: nil)
+        let rootViewController = injector.resolve(PlacesViewController.self)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         return true

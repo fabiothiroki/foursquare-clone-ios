@@ -25,7 +25,6 @@
 		BE3C73931FCE5A3A00F37C7F /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C73921FCE5A3A00F37C7F /* PlacesService.swift */; };
 		BE3C73941FCE5A3A00F37C7F /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C73921FCE5A3A00F37C7F /* PlacesService.swift */; };
 		BE9C83E81F8AE1D200A5401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */; };
-		BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EB1F8AE1D200A5401F /* Main.storyboard */; };
 		BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */; };
 		BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */; };
 		BEB25AEE2006EC4D00646979 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB25AED2006EC4D00646979 /* venues.json */; };
@@ -89,7 +88,6 @@
 		BE3C73921FCE5A3A00F37C7F /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 		BE9C83E41F8AE1D200A5401F /* Foursquare Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foursquare Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE9C83EC1F8AE1D200A5401F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE9C83F11F8AE1D300A5401F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE9C83F31F8AE1D300A5401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				BEB25AEC2006EC3000646979 /* Stubbed Responses */,
 				BE20BF102033891C00AB6BF1 /* View Controller */,
 				BE9C83E71F8AE1D200A5401F /* AppDelegate.swift */,
-				BE9C83EB1F8AE1D200A5401F /* Main.storyboard */,
 				BE9C83EE1F8AE1D300A5401F /* Assets.xcassets */,
 				BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */,
 				BE9C83F31F8AE1D300A5401F /* Info.plist */,
@@ -427,7 +424,6 @@
 				BE9C83F21F8AE1D300A5401F /* LaunchScreen.storyboard in Resources */,
 				BEB25AEE2006EC4D00646979 /* venues.json in Resources */,
 				BE9C83EF1F8AE1D300A5401F /* Assets.xcassets in Resources */,
-				BE9C83ED1F8AE1D200A5401F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,14 +651,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE9C83EB1F8AE1D200A5401F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE9C83EC1F8AE1D200A5401F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BE9C83F01F8AE1D300A5401F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
