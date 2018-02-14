@@ -20,7 +20,7 @@ class InjectorSpec: XCTestCase {
     }
 
     func testShouldResolveViewController() {
-        let viewController = injector.resolve(ViewController.self)
+        let viewController = injector.resolve(PlacesViewController.self)
         XCTAssertNotNil(viewController)
     }
 
