@@ -30,6 +30,13 @@ class PlacesViewController: UIViewController {
 extension PlacesViewController: StoreSubscriber {
 
     func newState(state: FetchedPlacesState) {
+        switch state.places {
+        case .loading:
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        default:
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
+
         print(state)
     }
 
