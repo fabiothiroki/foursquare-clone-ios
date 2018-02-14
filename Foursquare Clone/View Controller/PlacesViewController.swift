@@ -11,6 +11,8 @@ import ReSwift
 
 class PlacesViewController: UIViewController {
 
+    @IBOutlet weak var locationName: UILabel!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.subscribe(self)
@@ -30,9 +32,15 @@ class PlacesViewController: UIViewController {
 extension PlacesViewController: StoreSubscriber {
 
     func newState(state: FetchedPlacesState) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        locationName.isHidden = true
+
         switch state.places {
         case .loading:
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        case .finished(let places):
+            locationName.text = "near \(places.headerFullLocation)"
+            locationName.isHidden = false
         default:
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
