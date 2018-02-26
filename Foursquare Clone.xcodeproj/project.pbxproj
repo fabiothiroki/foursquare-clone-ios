@@ -60,6 +60,9 @@
 		BEF8C8EC1FBD03EC00A756C5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */; };
 		E542D29C2044B99E009DCA20 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4DA62B2034C22C00F6DD05 /* PlacesViewController.swift */; };
 		E56D95231FCF5FEF00FFA4BA /* UserLocationServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D95221FCF5FEF00FFA4BA /* UserLocationServiceMock.swift */; };
+		E598002E2044BE8000912B17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E598002D2044BE7F00912B17 /* QuartzCore.framework */; };
+		E59800312044C1DE00912B17 /* UIView+FoursquareClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59800302044C1DE00912B17 /* UIView+FoursquareClone.swift */; };
+		E59800322044C1DE00912B17 /* UIView+FoursquareClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59800302044C1DE00912B17 /* UIView+FoursquareClone.swift */; };
 		E5B65C331FD73B9D00D3226A /* AppReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B65C321FD73B9D00D3226A /* AppReducerSpec.swift */; };
 		F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +118,8 @@
 		BEF8C8E61FBCF3D700A756C5 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		E56D95221FCF5FEF00FFA4BA /* UserLocationServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationServiceMock.swift; sourceTree = "<group>"; };
+		E598002D2044BE7F00912B17 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E59800302044C1DE00912B17 /* UIView+FoursquareClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FoursquareClone.swift"; sourceTree = "<group>"; };
 		E5B65C321FD73B9D00D3226A /* AppReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducerSpec.swift; sourceTree = "<group>"; };
 		E89B84E07B99D63BA61C5E57 /* Pods-Foursquare CloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquare CloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foursquare CloneTests/Pods-Foursquare CloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquare_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E598002E2044BE8000912B17 /* QuartzCore.framework in Frameworks */,
 				4645BFFD65E5E574348C6C7F /* Pods_Foursquare_Clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +164,7 @@
 		9AF039833A44EA6A7B0E79F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E598002D2044BE7F00912B17 /* QuartzCore.framework */,
 				EA546AA6EB2DCC329217E1CC /* Pods_Foursquare_Clone.framework */,
 				359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */,
 				987B857AEA84AF395D53BA4A /* Pods_Foursquare_CloneUITests.framework */,
@@ -232,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				BEF8C8E91FBD03D700A756C5 /* Actions */,
+				E598002F2044C17400912B17 /* Extensions */,
 				BEC1FDFE1FC7A68F0062B64F /* Injector */,
 				BEF7B5391FA01EE6007157AB /* Models */,
 				BEBF8F221FB735EC0001EB4F /* Networking */,
@@ -351,6 +359,14 @@
 				E56D95221FCF5FEF00FFA4BA /* UserLocationServiceMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E598002F2044C17400912B17 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E59800302044C1DE00912B17 /* UIView+FoursquareClone.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E5B65C311FD73B5100D3226A /* Reducers */ = {
@@ -623,6 +639,7 @@
 				BEBF8F1D1FB3F42E0001EB4F /* LocationPlaces.swift in Sources */,
 				BECD033A1F8DCEE900470DAF /* UserLocationService.swift in Sources */,
 				BEF7B5431FA63EF5007157AB /* ServicesConstants.swift in Sources */,
+				E59800312044C1DE00912B17 /* UIView+FoursquareClone.swift in Sources */,
 				BEBF8F201FB400600001EB4F /* PlaceTip.swift in Sources */,
 				BE3C738C1FCE3FB000F37C7F /* NearbyPlacesService.swift in Sources */,
 				BEBF8F1A1FB3E46A0001EB4F /* PhotoItem.swift in Sources */,
@@ -657,6 +674,7 @@
 				BECD03431F8DD47400470DAF /* LocationManagerMock.swift in Sources */,
 				BEF7B53C1FA02A70007157AB /* PlacesApi.swift in Sources */,
 				BEC1FE011FC7A6A20062B64F /* Injector.swift in Sources */,
+				E59800322044C1DE00912B17 /* UIView+FoursquareClone.swift in Sources */,
 				BE3C73941FCE5A3A00F37C7F /* PlacesService.swift in Sources */,
 				BEBF8F1E1FB3F42E0001EB4F /* LocationPlaces.swift in Sources */,
 				BE2E0F801FA80204002A5494 /* Place.swift in Sources */,

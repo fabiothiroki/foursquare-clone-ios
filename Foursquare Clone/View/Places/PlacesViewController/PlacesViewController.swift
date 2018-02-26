@@ -45,7 +45,7 @@ extension PlacesViewController: StoreSubscriber {
         case .loading:
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
         case .finished(let places):
-            locationName.text = "near \(places.headerFullLocation)"
+            locationName.text = "\(places.headerFullLocation)"
             locationName.isHidden = false
             self.places = places.places
             collectionView.reloadData()
