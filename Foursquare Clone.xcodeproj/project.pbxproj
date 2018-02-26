@@ -58,6 +58,7 @@
 		BEF8C8E81FBCF3D700A756C5 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8E61FBCF3D700A756C5 /* AppReducer.swift */; };
 		BEF8C8EB1FBD03EC00A756C5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */; };
 		BEF8C8EC1FBD03EC00A756C5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8C8EA1FBD03EC00A756C5 /* Actions.swift */; };
+		E542D29C2044B99E009DCA20 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4DA62B2034C22C00F6DD05 /* PlacesViewController.swift */; };
 		E56D95231FCF5FEF00FFA4BA /* UserLocationServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D95221FCF5FEF00FFA4BA /* UserLocationServiceMock.swift */; };
 		E5B65C331FD73B9D00D3226A /* AppReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B65C321FD73B9D00D3226A /* AppReducerSpec.swift */; };
 		F747FBAF2E8C583943CA1B99 /* Pods_Foursquare_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359F1867D745D2C6382832E6 /* Pods_Foursquare_CloneTests.framework */; };
@@ -661,6 +662,7 @@
 				BE2E0F801FA80204002A5494 /* Place.swift in Sources */,
 				BEBF8F211FB400600001EB4F /* PlaceTip.swift in Sources */,
 				BEF7B5441FA63EF5007157AB /* ServicesConstants.swift in Sources */,
+				E542D29C2044B99E009DCA20 /* PlacesViewController.swift in Sources */,
 				E56D95231FCF5FEF00FFA4BA /* UserLocationServiceMock.swift in Sources */,
 				BEBF8F181FB3E4560001EB4F /* PhotoGroup.swift in Sources */,
 				BE4DA6392034C26400F6DD05 /* PlaceCollectionViewCell.swift in Sources */,
@@ -807,7 +809,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8493827AEQ;
+				DEVELOPMENT_TEAM = C262YN2D5X;
 				INFOPLIST_FILE = "Foursquare Clone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Foursquare-Clone";
@@ -823,7 +825,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8493827AEQ;
+				DEVELOPMENT_TEAM = C262YN2D5X;
 				INFOPLIST_FILE = "Foursquare Clone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Foursquare-Clone";
