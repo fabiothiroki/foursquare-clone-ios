@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PlaceCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
@@ -21,7 +22,12 @@ class PlaceCollectionViewCell: UICollectionViewCell {
 //            hero.id = "\(name)"
 
             nameLabel.text = name
-//            imageView.image = place.image
+            
+            if let url = URL(string: place.imageUrl) {
+                imageView.kf.setImage(with: url)
+            } else {
+                imageView.image = nil
+            }
 //            descriptionLabel.text = place.description
         }
     }
