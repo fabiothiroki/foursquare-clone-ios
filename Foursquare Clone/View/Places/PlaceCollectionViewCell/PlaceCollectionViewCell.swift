@@ -17,18 +17,17 @@ class PlaceCollectionViewCell: UICollectionViewCell {
     var place: Place? {
         didSet {
             guard let place = place else { return }
-            let name = place.name
 
 //            hero.id = "\(name)"
 
-            nameLabel.text = name
-            
+            nameLabel.text = place.name
+
             if let url = URL(string: place.imageUrl) {
                 imageView.kf.setImage(with: url)
             } else {
                 imageView.image = nil
             }
-//            descriptionLabel.text = place.description
+            descriptionLabel.text = place.category
         }
     }
 }

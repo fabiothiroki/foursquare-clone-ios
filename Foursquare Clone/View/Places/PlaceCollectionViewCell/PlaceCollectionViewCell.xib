@@ -28,7 +28,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjq-rf-dIu">
-                        <rect key="frame" x="32" y="230" width="91" height="24"/>
+                        <rect key="frame" x="32" y="230" width="152" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -47,6 +47,7 @@
                 <constraint firstItem="0yy-ad-fWy" firstAttribute="leading" secondItem="TF3-dh-1ep" secondAttribute="leadingMargin" constant="16" id="6Hu-7I-8cG"/>
                 <constraint firstItem="0yy-ad-fWy" firstAttribute="top" secondItem="Jjq-rf-dIu" secondAttribute="bottom" constant="9" id="AbJ-1i-xuh"/>
                 <constraint firstAttribute="trailing" secondItem="toa-Vk-2Hl" secondAttribute="trailing" id="BB1-MP-iVn"/>
+                <constraint firstAttribute="trailing" secondItem="Jjq-rf-dIu" secondAttribute="trailing" constant="16" id="Ncc-so-d4w"/>
                 <constraint firstItem="Jjq-rf-dIu" firstAttribute="leading" secondItem="TF3-dh-1ep" secondAttribute="leadingMargin" constant="16" id="X5E-b5-MYB"/>
                 <constraint firstItem="toa-Vk-2Hl" firstAttribute="top" secondItem="TF3-dh-1ep" secondAttribute="top" id="arS-I2-M7H"/>
                 <constraint firstAttribute="bottomMargin" secondItem="0yy-ad-fWy" secondAttribute="bottom" constant="20" id="b4H-Ae-wVH"/>
