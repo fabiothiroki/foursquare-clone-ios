@@ -67,8 +67,12 @@ class UserLocationServiceSpec: XCTestCase {
 
         locationStream.subscribe(onNext: { (_) in
             XCTFail("Should return error")
-        }, onError: { (error) in
-            XCTAssertNotNil(error)
+        }, onError: { (error) in            
+            if let err = error as? NSError {
+                XCTAssertEqual(mockError, err)
+            } else {
+                XCTFail("error should be a NSError instance")
+            }
         }).disposed(by: disposeBag)
 
         locationManager.delegate?.locationManager!(CLLocationManager(), didFailWithError: mockError)
