@@ -34,10 +34,8 @@ struct Injector {
     }
 
     private func setupControllers() {
-        container.register(ViewController.self) { resolver in
-            let controller = ViewController()
-            controller.store = resolver.resolve(Store<FetchedPlacesState>.self)
-            return controller
+        container.register(PlacesViewController.self) { _ in
+            return PlacesViewController(nibName: "PlacesViewController", bundle: nil)
         }
     }
 
@@ -63,7 +61,6 @@ struct Injector {
     }
 
     private func setupReducer() {
-
         container.register(AppReducer.self) { resolver in
             AppReducer.init(resolver.resolve(NearbyPlacesService.self)!)
         }

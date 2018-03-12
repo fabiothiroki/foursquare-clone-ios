@@ -22,9 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.makeKeyAndVisible()
         self.window = window
-        window.rootViewController = injector.resolve(ViewController.self)
+        let rootViewController = injector.resolve(PlacesViewController.self)
+        window.rootViewController = rootViewController
+        window.makeKeyAndVisible()
         return true
     }
 }
