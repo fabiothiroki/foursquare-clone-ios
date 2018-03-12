@@ -18,8 +18,6 @@ class PlaceCollectionViewCell: UICollectionViewCell {
         didSet {
             guard let place = place else { return }
 
-//            hero.id = "\(name)"
-
             nameLabel.text = place.name
 
             if let url = URL(string: place.imageUrl) {
