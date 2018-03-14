@@ -11,6 +11,9 @@ A simple iOS application that uses the Foursquare API to show nearby places of i
 
 ### Foursquare API Key
 
+Follow these instructions at [Foursquare Developers page](https://developer.foursquare.com/docs/api/getting-started) to obtain a **Client ID** and a **Client Secret**.
+Then copy and paste these values into [ServicesConstants.swift file](https://github.com/fabiothiroki/foursquare-clone-ios/blob/master/Foursquare%20Clone/Services/ServicesConstants.swift).
+
 ### Main Dependencies
 
 * Ruby 2.3.4: recommended to install it using [Ruby Version Manager (RVM)](https://rvm.io/)
