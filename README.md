@@ -7,7 +7,8 @@
 
 A simple iOS application that uses the Foursquare API to show nearby places of interest.
 
-![simulator screen shot - iphone 5s - 2018-04-09 at 20 55 04](https://user-images.githubusercontent.com/670057/38528933-50023a4c-3c38-11e8-9c4c-3ec7032a2320.png)
+![simulator screen shot - iphone 5s - 2018-04-09 at 20 55 04](https://user-images.githubusercontent.com/670057/38528933-50023a4c-3c38-11e8-9c4c-3ec7032a2320.png) ![screenshot](https://user-images.githubusercontent.com/670057/38529443-25429808-3c3b-11e8-9451-d622ff523489.gif)
+
 
 ## Setup
 
