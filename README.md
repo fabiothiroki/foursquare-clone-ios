@@ -36,3 +36,19 @@ You can now open the `Foursquare Clone.xcworkspace` file and run.
 ### Test
 
 After installing all dependencies you can run the tests by clicking `Product > Test` or simply `CMD + U`
+
+## Tutorial
+
+Step-by-step guide for building this app:
+
+[Part 1: Introduction and setup](https://medium.com/ios-os-x-development/build-a-foursquare-clone-ios-app-part-1-introduction-and-setup-1c38bda44ba4)
+
+[Part 2: Location data and managing dependencies](https://medium.com/ios-os-x-development/build-a-foursquare-clone-ios-app-part-2-location-data-and-managing-dependencies-5fcf76c3b21d)
+
+[Part 3: Continuous Integration](https://medium.com/ios-os-x-development/build-a-foursquare-clone-ios-app-part-3-continuous-integration-fefb508adba)
+
+[Part 4: Streaming location](https://medium.com/ios-os-x-development/build-a-foursquare-clone-ios-app-part-4-streaming-location-64966289a8b2)
+
+[Part 5: Network layer](https://medium.com/ios-os-x-development/build-a-foursquare-clone-ios-app-part-5-network-layer-80d46420298)
+
+[Part 6: State management](https://medium.com/ios-os-x-development/build-a-foursquare-clone-ios-app-part-6-state-management-e9d6b32fc4)
